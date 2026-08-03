@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova AI — AI-креатор агентство</title>
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/intro.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div id="intro-overlay">
+  <canvas id="intro-canvas"></canvas>
+  <div class="intro-logo">Nova AI</div>
+  <button class="intro-skip" id="intro-skip" data-i18n="intro.skip">Пропустити</button>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <span class="logo">Nova AI</span>
+    <nav class="main-nav">
+      <a href="#services" data-i18n="nav.services">Послуги</a>
+      <a href="#portfolio" data-i18n="nav.portfolio">Роботи</a>
+      <a href="#process" data-i18n="nav.process">Процес</a>
+      <a href="#contact" data-i18n="nav.contact">Контакти</a>
+    </nav>
+    <button class="lang-toggle" data-lang-toggle type="button">EN</button>
+  </div>
+</header>
+
+<main>
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+      <h1 data-i18n="hero.title">Твоя ідея заслуговує вибухового старту</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Ми запускаємо її в реальність за допомогою AI</p>
+      <p class="hero-description" data-i18n="hero.description">AI-креатор агентство, що перетворює ваші ідеї на візуали, відео та контент, готові підкорювати аудиторію.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">Залишити заявку</a>
+        <a href="#services" class="btn btn-secondary" data-i18n="hero.ctaSecondary">Дізнатись більше</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2 data-i18n="about.title">Про нас</h2>
+      <p data-i18n="about.text">Nova AI — команда, що поєднує креативність людини з можливостями штучного інтелекту. Ми створюємо візуали, відео та контент, які виглядають так, ніби над ними працювала ціла студія — швидше і доступніше.</p>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <h2 data-i18n="services.title">Послуги</h2>
+      <p class="section-subtitle" data-i18n="services.subtitle">Повний цикл AI-креативу для вашого бренду</p>
+      <div class="services-grid">
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4L12 3z"/><circle cx="18" cy="17" r="2"/></svg></span>
+          <h3 data-i18n="services.items.visuals.title">AI-генерація візуалів та брендинг</h3>
+          <p data-i18n="services.items.visuals.subtitle">Бренд, який запам'ятовується з першого погляду</p>
+          <button class="btn-chip" data-service-chip="visuals" type="button" data-i18n="services.cta">Обрати послугу</button>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3V9z"/></svg></span>
+          <h3 data-i18n="services.items.video.title">AI-відео та моушн-дизайн</h3>
+          <p data-i18n="services.items.video.subtitle">Відео, що говорить голосніше за слова</p>
+          <button class="btn-chip" data-service-chip="video" type="button" data-i18n="services.cta">Обрати послугу</button>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h13v10H8l-4 4V4z"/></svg></span>
+          <h3 data-i18n="services.items.social.title">AI-контент для соцмереж</h3>
+          <p data-i18n="services.items.social.subtitle">Контент, який не пролистають повз</p>
+          <button class="btn-chip" data-service-chip="social" type="button" data-i18n="services.cta">Обрати послугу</button>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span>
+          <h3 data-i18n="services.items.automation.title">AI-автоматизація та боти</h3>
+          <p data-i18n="services.items.automation.subtitle">Робота, що триває навіть уночі</p>
+          <button class="btn-chip" data-service-chip="automation" type="button" data-i18n="services.cta">Обрати послугу</button>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20l3.5-1 11-11-2.5-2.5-11 11L4 20z"/><path d="M14 5l2.5 2.5"/></svg></span>
+          <h3 data-i18n="services.items.copywriting.title">AI-копірайтинг</h3>
+          <p data-i18n="services.items.copywriting.subtitle">Тексти, що продають, а не просто заповнюють простір</p>
+          <button class="btn-chip" data-service-chip="copywriting" type="button" data-i18n="services.cta">Обрати послугу</button>
+        </article>
+
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0012 3z"/></svg></span>
+          <h3 data-i18n="services.items.consulting.title">Консалтинг з впровадження AI</h3>
+          <p data-i18n="services.items.consulting.subtitle">Перший крок до AI без хаосу</p>
+          <button class="btn-chip" data-service-chip="consulting" type="button" data-i18n="services.cta">Обрати послугу</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2 data-i18n="portfolio.title">Приклади робіт</h2>
+      <p class="section-subtitle" data-i18n="portfolio.subtitle">Навчальні AI-візуали, що демонструють стиль подачі</p>
+      <div class="portfolio-grid">
+        <figure class="portfolio-card portfolio-card--1"><figcaption data-i18n="portfolio.items.1">AI-візуал · Абстрактна композиція</figcaption></figure>
+        <figure class="portfolio-card portfolio-card--2"><figcaption data-i18n="portfolio.items.2">AI-візуал · Продуктова сцена</figcaption></figure>
+        <figure class="portfolio-card portfolio-card--3"><figcaption data-i18n="portfolio.items.3">AI-моушн · Цикл переходів</figcaption></figure>
+        <figure class="portfolio-card portfolio-card--4"><figcaption data-i18n="portfolio.items.4">AI-візуал · Портретне світло</figcaption></figure>
+        <figure class="portfolio-card portfolio-card--5"><figcaption data-i18n="portfolio.items.5">AI-контент · Соціальний пост</figcaption></figure>
+        <figure class="portfolio-card portfolio-card--6"><figcaption data-i18n="portfolio.items.6">AI-візуал · Архітектурна форма</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="process">
+    <div class="container">
+      <h2 data-i18n="process.title">Як ми працюємо</h2>
+      <p class="section-subtitle" data-i18n="process.subtitle">П'ять кроків від ідеї до результату</p>
+      <ol class="process-timeline">
+        <li><span class="step-number">1</span><h3 data-i18n="process.steps.1.title">Заявка та брифінг</h3><p data-i18n="process.steps.1.desc">Розповідаєте про мету, ми уточнюємо деталі</p></li>
+        <li><span class="step-number">2</span><h3 data-i18n="process.steps.2.title">Концепція та стратегія</h3><p data-i18n="process.steps.2.desc">Пропонуємо підхід і AI-інструменти під задачу</p></li>
+        <li><span class="step-number">3</span><h3 data-i18n="process.steps.3.title">Генерація та розробка</h3><p data-i18n="process.steps.3.desc">Створюємо контент за допомогою AI</p></li>
+        <li><span class="step-number">4</span><h3 data-i18n="process.steps.4.title">Узгодження та доопрацювання</h3><p data-i18n="process.steps.4.desc">Враховуємо правки, доводимо до ідеалу</p></li>
+        <li><span class="step-number">5</span><h3 data-i18n="process.steps.5.title">Запуск та підтримка</h3><p data-i18n="process.steps.5.desc">Публікуємо результат і залишаємось на зв'язку</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="advantages" class="advantages">
+    <div class="container">
+      <h2 data-i18n="advantages.title">Переваги</h2>
+      <div class="advantages-grid">
+        <div class="advantage-item"><h3 data-i18n="advantages.items.1.title">Швидкість завдяки AI</h3><p data-i18n="advantages.items.1.desc">Результат у рази швидше за традиційний підхід</p></div>
+        <div class="advantage-item"><h3 data-i18n="advantages.items.2.title">Індивідуальний підхід</h3><p data-i18n="advantages.items.2.desc">Кожен проєкт під ваш бренд, без шаблонів</p></div>
+        <div class="advantage-item"><h3 data-i18n="advantages.items.3.title">Все в одному місці</h3><p data-i18n="advantages.items.3.desc">Візуал, відео, текст і автоматизація в одній команді</p></div>
+        <div class="advantage-item"><h3 data-i18n="advantages.items.4.title">Прозорість процесу</h3><p data-i18n="advantages.items.4.desc">Узгоджуємо кожен крок разом з вами</p></div>
+        <div class="advantage-item"><h3 data-i18n="advantages.items.5.title">Сучасні AI-інструменти</h3><p data-i18n="advantages.items.5.desc">Використовуємо найновіші моделі та технології</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 data-i18n="contact.title">Залишити заявку</h2>
+      <p class="section-subtitle" data-i18n="contact.subtitle">Розкажіть про свою ідею — ми зв'яжемось найближчим часом</p>
+
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="name" data-i18n="contact.fieldName">Ім'я</label>
+          <input type="text" id="name" name="name">
+          <span class="field-error" data-error-for="name"></span>
+        </div>
+        <div class="field">
+          <label for="contact-value" data-i18n="contact.fieldContact">Email або телефон</label>
+          <input type="text" id="contact-value" name="contact">
+          <span class="field-error" data-error-for="contact"></span>
+        </div>
+        <div class="field">
+          <label for="message" data-i18n="contact.fieldMessage">Повідомлення</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+          <span class="field-error" data-error-for="message"></span>
+        </div>
+        <fieldset class="interest-fieldset">
+          <legend data-i18n="contact.fieldInterest">Що вас цікавить?</legend>
+          <label><input type="checkbox" name="interest" value="visuals"><span data-i18n="services.items.visuals.title">AI-генерація візуалів та брендинг</span></label>
+          <label><input type="checkbox" name="interest" value="video"><span data-i18n="services.items.video.title">AI-відео та моушн-дизайн</span></label>
+          <label><input type="checkbox" name="interest" value="social"><span data-i18n="services.items.social.title">AI-контент для соцмереж</span></label>
+          <label><input type="checkbox" name="interest" value="automation"><span data-i18n="services.items.automation.title">AI-автоматизація та боти</span></label>
+          <label><input type="checkbox" name="interest" value="copywriting"><span data-i18n="services.items.copywriting.title">AI-копірайтинг</span></label>
+          <label><input type="checkbox" name="interest" value="consulting"><span data-i18n="services.items.consulting.title">Консалтинг з впровадження AI</span></label>
+        </fieldset>
+        <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Відправити заявку</button>
+      </form>
+      <div id="contact-success" class="contact-success" hidden data-i18n="contact.successMessage">Дякуємо! Ми зв'яжемось з вами найближчим часом.</div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span class="logo">Nova AI</span>
+    <p data-i18n="footer.tagline">Творимо майбутнє за допомогою штучного інтелекту</p>
+    <p class="copyright" data-i18n="footer.copyright">© 2026 Nova AI. Усі права захищено.</p>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
