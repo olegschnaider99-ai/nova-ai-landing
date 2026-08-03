@@ -1,0 +1,55 @@
+#intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #020409;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+#intro-overlay.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#intro-canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.intro-logo {
+  position: relative;
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 6vw, 48px);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-shadow: 0 0 30px rgba(95, 196, 255, 0.7), 0 0 60px rgba(63, 143, 224, 0.4);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.intro-logo.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.intro-skip {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  font-size: 12px;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border-glass);
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.intro-skip:hover {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
