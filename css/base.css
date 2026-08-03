@@ -37,65 +37,13 @@ body::after {
   filter: blur(6px);
 }
 
-/* Starfield — dense multi-size layer with a few twinkling bright stars */
+/* Starfield — rendered on canvas by js/starfield.js for realistic
+   varied star sizes, soft glow on bright stars, and gentle twinkle */
 .starfield {
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-image:
-    radial-gradient(1px 1px at 6% 12%, #fff, transparent),
-    radial-gradient(1px 1px at 14% 45%, #fff, transparent),
-    radial-gradient(1px 1px at 22% 78%, #fff, transparent),
-    radial-gradient(1px 1px at 30% 25%, #fff, transparent),
-    radial-gradient(1px 1px at 38% 60%, #fff, transparent),
-    radial-gradient(1px 1px at 46% 15%, #fff, transparent),
-    radial-gradient(1px 1px at 54% 88%, #fff, transparent),
-    radial-gradient(1px 1px at 62% 38%, #fff, transparent),
-    radial-gradient(1px 1px at 70% 70%, #fff, transparent),
-    radial-gradient(1px 1px at 78% 20%, #fff, transparent),
-    radial-gradient(1px 1px at 86% 55%, #fff, transparent),
-    radial-gradient(1px 1px at 94% 82%, #fff, transparent),
-    radial-gradient(1px 1px at 3% 60%, #fff, transparent),
-    radial-gradient(1px 1px at 11% 92%, #fff, transparent),
-    radial-gradient(1px 1px at 18% 5%, #fff, transparent),
-    radial-gradient(1px 1px at 26% 50%, #fff, transparent),
-    radial-gradient(1px 1px at 42% 95%, #fff, transparent),
-    radial-gradient(1px 1px at 58% 5%, #fff, transparent),
-    radial-gradient(1px 1px at 65% 90%, #fff, transparent),
-    radial-gradient(1px 1px at 74% 42%, #fff, transparent),
-    radial-gradient(1px 1px at 82% 8%, #fff, transparent),
-    radial-gradient(1px 1px at 90% 68%, #fff, transparent),
-    radial-gradient(1px 1px at 97% 32%, #fff, transparent),
-    radial-gradient(1.6px 1.6px at 10% 30%, #fff, transparent),
-    radial-gradient(1.6px 1.6px at 34% 85%, #fff, transparent),
-    radial-gradient(1.6px 1.6px at 58% 10%, #fff, transparent),
-    radial-gradient(1.6px 1.6px at 82% 42%, #fff, transparent),
-    radial-gradient(1.6px 1.6px at 44% 30%, #fff, transparent),
-    radial-gradient(1.6px 1.6px at 68% 58%, #fff, transparent);
-  opacity: 0.8;
-}
-
-.starfield::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(2.2px 2.2px at 20% 55%, #fff, transparent),
-    radial-gradient(2.4px 2.4px at 66% 65%, #fff, transparent),
-    radial-gradient(2.2px 2.2px at 90% 18%, #fff, transparent),
-    radial-gradient(2.4px 2.4px at 40% 20%, #fff, transparent);
-  animation: twinkle 3.5s ease-in-out infinite alternate;
-}
-
-@keyframes twinkle {
-  0% { opacity: 0.5; }
-  50% { opacity: 1; }
-  100% { opacity: 0.6; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .starfield::after { animation: none; }
 }
 
 h1, h2, h3 {

@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nova AI — AI-креатор агентство</title>
+<meta name="description" content="AI-креатор агентство, що перетворює ваші ідеї на візуали, відео та контент, готові підкорювати аудиторію.">
+<meta property="og:title" content="Nova AI — AI-креатор агентство">
+<meta property="og:description" content="Твоя ідея заслуговує вибухового старту. Ми запускаємо її в реальність за допомогою AI.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
@@ -13,7 +19,7 @@
 </head>
 <body>
 
-<div class="starfield" aria-hidden="true"></div>
+<canvas id="cosmic-canvas" class="starfield" aria-hidden="true"></canvas>
 
 <div id="intro-overlay">
   <canvas id="intro-canvas"></canvas>
@@ -156,17 +162,17 @@
         <div class="field">
           <label for="name" data-i18n="contact.fieldName">Ім'я</label>
           <input type="text" id="name" name="name">
-          <span class="field-error" data-error-for="name"></span>
+          <span class="field-error" data-error-for="name" aria-live="polite"></span>
         </div>
         <div class="field">
           <label for="contact-value" data-i18n="contact.fieldContact">Email або телефон</label>
           <input type="text" id="contact-value" name="contact">
-          <span class="field-error" data-error-for="contact"></span>
+          <span class="field-error" data-error-for="contact" aria-live="polite"></span>
         </div>
         <div class="field">
           <label for="message" data-i18n="contact.fieldMessage">Повідомлення</label>
           <textarea id="message" name="message" rows="4"></textarea>
-          <span class="field-error" data-error-for="message"></span>
+          <span class="field-error" data-error-for="message" aria-live="polite"></span>
         </div>
         <fieldset class="interest-fieldset">
           <legend data-i18n="contact.fieldInterest">Що вас цікавить?</legend>

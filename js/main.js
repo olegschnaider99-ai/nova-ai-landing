@@ -3,8 +3,10 @@ import { initIntro } from './intro.js';
 import { initStickyHeader } from './nav.js';
 import { initServiceChips } from './services.js';
 import { initContactForm } from './form.js';
+import { initStarfield } from './starfield.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initStarfield();
   initI18n();
   initIntro();
   initStickyHeader();
