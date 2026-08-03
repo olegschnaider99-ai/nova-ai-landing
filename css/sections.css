@@ -117,3 +117,40 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+
+.portfolio {
+  padding: 100px 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.portfolio-card {
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  border: 1px solid var(--border-glass);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.portfolio-card figcaption {
+  position: relative;
+  z-index: 1;
+  padding: 14px 16px;
+  font-size: 13px;
+  color: var(--text-primary);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
+  width: 100%;
+}
+
+.portfolio-card--1 { background: radial-gradient(circle at 30% 30%, var(--accent-blue), transparent 60%), radial-gradient(circle at 70% 70%, var(--accent-violet), transparent 60%), var(--bg-deep); }
+.portfolio-card--2 { background: linear-gradient(135deg, var(--accent-teal), var(--bg-mid) 70%); }
+.portfolio-card--3 { background: conic-gradient(from 90deg, var(--accent-blue), var(--accent-violet), var(--accent-teal), var(--accent-blue)); }
+.portfolio-card--4 { background: radial-gradient(ellipse at 50% 20%, var(--accent-violet), var(--bg-deep) 70%); }
+.portfolio-card--5 { background: linear-gradient(160deg, var(--accent-blue-2), var(--bg-deep)); }
+.portfolio-card--6 { background: repeating-linear-gradient(45deg, var(--bg-mid), var(--bg-mid) 12px, rgba(95,196,255,0.15) 12px, rgba(95,196,255,0.15) 24px); }
