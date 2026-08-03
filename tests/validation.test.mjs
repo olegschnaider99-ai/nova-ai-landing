@@ -14,6 +14,10 @@ test('rejects a string with neither an email nor a phone shape', () => {
   assert.equal(isValidEmailOrPhone('not-a-contact'), false);
 });
 
+test('rejects a phone-shaped string padded with separators instead of real digits', () => {
+  assert.equal(isValidEmailOrPhone('1......'), false);
+});
+
 test('validateForm passes with all fields filled correctly', () => {
   const { valid, errors } = validateForm({ name: 'Олег', contact: 'test@test.com', message: 'Привіт' });
   assert.equal(valid, true);
