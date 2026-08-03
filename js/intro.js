@@ -19,13 +19,18 @@ export function initIntro() {
     return;
   }
 
-  runParticleAnimation(canvas, overlay);
-  skipBtn.addEventListener('click', () => finishIntro(overlay));
+  const stopAnimation = runParticleAnimation(canvas, overlay);
+  skipBtn.addEventListener('click', () => {
+    stopAnimation();
+    finishIntro(overlay);
+  });
 }
 
 function runParticleAnimation(canvas, overlay) {
   const ctx = canvas.getContext('2d');
   let width, height;
+  let stopped = false;
+  let rafId = null;
 
   function resize() {
     width = canvas.width = window.innerWidth;
@@ -54,7 +59,15 @@ function runParticleAnimation(canvas, overlay) {
     return 1 - Math.pow(1 - t, 3);
   }
 
+  function cleanup() {
+    stopped = true;
+    if (rafId !== null) cancelAnimationFrame(rafId);
+    window.removeEventListener('resize', resize);
+  }
+
   function frame(now) {
+    if (stopped) return;
+
     const elapsed = now - startTime;
     const t = Math.min(elapsed / duration, 1);
     const eased = easeOutCubic(t);
@@ -73,12 +86,15 @@ function runParticleAnimation(canvas, overlay) {
     });
 
     if (t < 1) {
-      requestAnimationFrame(frame);
+      rafId = requestAnimationFrame(frame);
     } else {
+      cleanup();
       revealLogo(overlay);
     }
   }
-  requestAnimationFrame(frame);
+  rafId = requestAnimationFrame(frame);
+
+  return cleanup;
 }
 
 function revealLogo(overlay) {
