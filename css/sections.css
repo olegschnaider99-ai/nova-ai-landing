@@ -208,3 +208,41 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+
+.contact {
+  padding: 100px 0 60px;
+}
+
+.contact form {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.contact-success {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 24px;
+  background: var(--glass-bg);
+  border: 1px solid var(--accent-blue);
+  border-radius: 16px;
+  color: var(--text-primary);
+}
+
+.site-footer {
+  padding: 48px 0;
+  text-align: center;
+  border-top: 1px solid var(--border-glass);
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.site-footer .logo {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.site-footer p {
+  margin-top: 4px;
+}
