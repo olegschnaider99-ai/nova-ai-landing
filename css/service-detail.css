@@ -1,0 +1,145 @@
+.service-detail {
+  padding: 140px 0 100px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--accent-blue);
+}
+
+.service-detail-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.service-detail-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--accent-blue);
+}
+
+.service-detail h1 {
+  font-size: clamp(28px, 4.5vw, 42px);
+  margin-bottom: 10px;
+}
+
+.service-detail-tagline {
+  font-size: 17px;
+  color: var(--accent-violet);
+  margin-bottom: 20px;
+}
+
+.service-detail-intro {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 48px;
+  max-width: 62ch;
+}
+
+.service-detail h2 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  margin: 40px 0 18px;
+}
+
+.service-detail-list,
+.service-detail-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.service-detail-list li,
+.service-detail-steps li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.service-detail-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-violet), var(--accent-blue));
+}
+
+.service-detail-steps {
+  counter-reset: step-counter;
+}
+
+.service-detail-steps li {
+  counter-increment: step-counter;
+}
+
+.service-detail-steps li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 1px solid var(--accent-violet);
+  color: var(--text-primary);
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tool-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tool-chip {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-glass);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.service-detail-cta {
+  margin-top: 56px;
+  padding: 32px;
+  border-radius: 16px;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-glass);
+  text-align: center;
+}
+
+.service-detail-cta p {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  margin-bottom: 18px;
+}

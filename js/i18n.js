@@ -29,7 +29,8 @@ export function applyLanguage(lang) {
   currentLang = lang;
   writeStoredLang(lang);
   document.documentElement.lang = HTML_LANG_TAG[lang] ?? lang;
-  document.title = translate('meta.title', lang);
+  const titleKey = document.body.dataset.titleKey || 'meta.title';
+  document.title = translate(titleKey, lang);
 
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     el.textContent = translate(el.dataset.i18n, lang);

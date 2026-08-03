@@ -173,6 +173,24 @@
   margin-bottom: 16px;
 }
 
+.service-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.service-detail-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-blue);
+  transition: color 0.2s ease;
+}
+
+.service-detail-link:hover {
+  color: var(--accent-violet);
+}
+
 /* Form fields */
 .field {
   margin-bottom: 18px;
