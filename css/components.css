@@ -63,6 +63,7 @@
   color: var(--text-secondary);
   background: var(--glass-bg);
   border: 1px solid var(--border-glass);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   transition: all 0.2s ease;
 }
@@ -94,6 +95,7 @@
   border: 1px solid var(--border-glass);
   border-radius: 16px;
   padding: 28px;
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
 
