@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap');
 
 :root {
-  --bg-deep: #020409;
-  --bg-mid: #071224;
-  --bg-radial: radial-gradient(ellipse at 50% 25%, #0a1b30 0%, #030710 60%, #000103 100%);
+  /* Aurora Berry palette — dark violet/pink cosmos with a blue accent thread */
+  --bg-deep: #0a0414;
+  --bg-mid: #170a2e;
+  --bg-radial: radial-gradient(ellipse at 50% 20%, #170a2e 0%, #0a0414 55%, #030106 100%);
   --accent-blue: #5fc4ff;
   --accent-blue-2: #3f8fe0;
-  --accent-violet: #b98cff;
+  --accent-violet: #9b5fe0;
+  --accent-pink: #e05fb0;
   --accent-teal: #7fe0d0;
-  --text-primary: #eaf6ff;
-  --text-secondary: #9fc7e6;
-  --text-muted: #6a86a0;
+  --text-primary: #f3ecff;
+  --text-secondary: #c3a9e6;
+  --text-muted: #8672a8;
   --glass-bg: rgba(255, 255, 255, 0.05);
   --border-glass: rgba(255, 255, 255, 0.16);
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Exo 2', sans-serif;
+  --font-body: 'Manrope', sans-serif;
 }

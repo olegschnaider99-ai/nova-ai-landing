@@ -12,22 +12,33 @@ body {
   overflow-x: hidden;
 }
 
-/* Nebula haze — soft blurred color wash behind the starfield */
+/* Nebula haze — three soft color blobs (violet/pink/blue) behind the starfield */
 body::before {
   content: '';
   position: fixed;
-  inset: -10%;
-  z-index: -2;
+  inset: -20%;
+  z-index: -3;
   background:
-    radial-gradient(circle at 25% 30%, rgba(95, 196, 255, 0.10), transparent 55%),
-    radial-gradient(circle at 75% 65%, rgba(185, 140, 255, 0.10), transparent 55%);
-  filter: blur(40px);
+    radial-gradient(circle at 25% 25%, rgba(155, 95, 224, 0.45), transparent 55%),
+    radial-gradient(circle at 75% 65%, rgba(224, 95, 176, 0.4), transparent 55%),
+    radial-gradient(circle at 50% 90%, rgba(95, 196, 255, 0.22), transparent 50%);
+  filter: blur(50px);
   pointer-events: none;
 }
 
-/* Starfield — three layers of stars at different sizes/opacity for depth */
+/* Milky Way band — faint diagonal light streak for extra depth */
 body::after {
   content: '';
+  position: fixed;
+  inset: -30%;
+  z-index: -2;
+  pointer-events: none;
+  background: linear-gradient(120deg, transparent 38%, rgba(243, 236, 255, 0.06) 47%, rgba(243, 236, 255, 0.1) 50%, rgba(243, 236, 255, 0.06) 53%, transparent 62%);
+  filter: blur(6px);
+}
+
+/* Starfield — dense multi-size layer with a few twinkling bright stars */
+.starfield {
   position: fixed;
   inset: 0;
   z-index: -1;
@@ -45,14 +56,46 @@ body::after {
     radial-gradient(1px 1px at 78% 20%, #fff, transparent),
     radial-gradient(1px 1px at 86% 55%, #fff, transparent),
     radial-gradient(1px 1px at 94% 82%, #fff, transparent),
+    radial-gradient(1px 1px at 3% 60%, #fff, transparent),
+    radial-gradient(1px 1px at 11% 92%, #fff, transparent),
+    radial-gradient(1px 1px at 18% 5%, #fff, transparent),
+    radial-gradient(1px 1px at 26% 50%, #fff, transparent),
+    radial-gradient(1px 1px at 42% 95%, #fff, transparent),
+    radial-gradient(1px 1px at 58% 5%, #fff, transparent),
+    radial-gradient(1px 1px at 65% 90%, #fff, transparent),
+    radial-gradient(1px 1px at 74% 42%, #fff, transparent),
+    radial-gradient(1px 1px at 82% 8%, #fff, transparent),
+    radial-gradient(1px 1px at 90% 68%, #fff, transparent),
+    radial-gradient(1px 1px at 97% 32%, #fff, transparent),
     radial-gradient(1.6px 1.6px at 10% 30%, #fff, transparent),
     radial-gradient(1.6px 1.6px at 34% 85%, #fff, transparent),
     radial-gradient(1.6px 1.6px at 58% 10%, #fff, transparent),
     radial-gradient(1.6px 1.6px at 82% 42%, #fff, transparent),
-    radial-gradient(2px 2px at 20% 55%, #fff, transparent),
-    radial-gradient(2px 2px at 66% 65%, #fff, transparent),
-    radial-gradient(2px 2px at 90% 18%, #fff, transparent);
-  opacity: 0.75;
+    radial-gradient(1.6px 1.6px at 44% 30%, #fff, transparent),
+    radial-gradient(1.6px 1.6px at 68% 58%, #fff, transparent);
+  opacity: 0.8;
+}
+
+.starfield::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2.2px 2.2px at 20% 55%, #fff, transparent),
+    radial-gradient(2.4px 2.4px at 66% 65%, #fff, transparent),
+    radial-gradient(2.2px 2.2px at 90% 18%, #fff, transparent),
+    radial-gradient(2.4px 2.4px at 40% 20%, #fff, transparent);
+  animation: twinkle 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .starfield::after { animation: none; }
 }
 
 h1, h2, h3 {
