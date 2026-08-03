@@ -1,0 +1,170 @@
+/* Buttons — signature style approved during brainstorming */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-primary {
+  position: relative;
+  padding: 15px 34px;
+  border-radius: 999px;
+  color: var(--text-primary);
+  background: linear-gradient(180deg, rgba(120, 200, 255, 0.16), rgba(60, 140, 220, 0.08));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(from var(--angle, 0deg), var(--accent-blue), var(--accent-violet), var(--accent-blue), var(--accent-teal), var(--accent-blue));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: spin 4s linear infinite;
+  z-index: -1;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  animation: sweep 2.6s ease-in-out infinite;
+}
+
+@keyframes spin { to { --angle: 360deg; } }
+@property --angle { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+@keyframes sweep { 0% { left: -60%; } 50% { left: 120%; } 100% { left: 120%; } }
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(95, 196, 255, 0.55), 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+.btn-secondary {
+  padding: 14px 30px;
+  border-radius: 999px;
+  color: var(--text-secondary);
+  background: var(--glass-bg);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-chip {
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--accent-blue);
+  background: rgba(95, 196, 255, 0.08);
+  border: 1px solid rgba(95, 196, 255, 0.4);
+  transition: all 0.2s ease;
+}
+
+.btn-chip:hover {
+  background: rgba(95, 196, 255, 0.18);
+  box-shadow: 0 0 14px rgba(95, 196, 255, 0.4);
+}
+
+/* Cards */
+.service-card, .advantage-item {
+  background: var(--glass-bg);
+  border: 1px solid var(--border-glass);
+  border-radius: 16px;
+  padding: 28px;
+  backdrop-filter: blur(6px);
+}
+
+.service-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--accent-blue);
+  margin-bottom: 12px;
+}
+
+.service-card h3, .advantage-item h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.service-card p, .advantage-item p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* Form fields */
+.field {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.field input, .field textarea {
+  background: var(--glass-bg);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+.field input:focus, .field textarea:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+}
+
+.field-error {
+  color: #ff8fa3;
+  font-size: 12px;
+  min-height: 14px;
+}
+
+.interest-fieldset {
+  border: none;
+  margin: 8px 0 24px;
+  padding: 0;
+}
+
+.interest-fieldset legend {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.interest-fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
