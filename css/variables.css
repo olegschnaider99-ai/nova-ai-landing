@@ -3,6 +3,7 @@
 :root {
   --bg-deep: #020409;
   --bg-mid: #071224;
+  --bg-radial: radial-gradient(ellipse at 50% 25%, #0a1b30 0%, #030710 60%, #000103 100%);
   --accent-blue: #5fc4ff;
   --accent-blue-2: #3f8fe0;
   --accent-violet: #b98cff;

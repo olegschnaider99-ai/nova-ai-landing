@@ -151,7 +151,7 @@
       <h2 data-i18n="contact.title">Залишити заявку</h2>
       <p class="section-subtitle" data-i18n="contact.subtitle">Розкажіть про свою ідею — ми зв'яжемось найближчим часом</p>
 
-      <form id="contact-form" novalidate>
+      <form id="contact-form" method="post" novalidate>
         <div class="field">
           <label for="name" data-i18n="contact.fieldName">Ім'я</label>
           <input type="text" id="name" name="name">
@@ -191,6 +191,15 @@
   </div>
 </footer>
 
+<script>
+  /* Fail-safe: if the module script above can't run for any reason
+     (blocked, unsupported, runtime error), don't leave the visitor
+     staring at a permanently blacked-out page. */
+  setTimeout(function () {
+    var overlay = document.getElementById('intro-overlay');
+    if (overlay) overlay.remove();
+  }, 6000);
+</script>
 <script type="module" src="js/main.js"></script>
 </body>
 </html>

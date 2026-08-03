@@ -1,4 +1,5 @@
 export const dictionary = {
+  'meta.title': { ua: 'Nova AI — AI-креатор агентство', en: 'Nova AI — AI-Creator Agency' },
   'intro.skip': { ua: 'Пропустити', en: 'Skip' },
 
   'nav.services': { ua: 'Послуги', en: 'Services' },
