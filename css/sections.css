@@ -228,6 +228,26 @@
   flex-shrink: 0;
 }
 
+/* Full-width statement — breaks the card-after-card rhythm between
+   Services and Portfolio with a plain editorial line, no icon, no glass. */
+.statement {
+  padding: 40px 0 80px;
+}
+
+.statement-block {
+  max-width: 760px;
+  padding-left: 28px;
+  border-left: 2px solid var(--accent-violet);
+}
+
+.statement-block p {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(21px, 3vw, 34px);
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
 .portfolio {
   padding: 100px 0;
 }
@@ -381,8 +401,20 @@
   margin-bottom: 0;
 }
 
+/* Contact is the one section that breaks out of the dark cosmic theme —
+   a deliberate light "paper" close, not another glass panel. Everything
+   else on the page is glow-on-dark; this is the one hard cut, on purpose. */
 .contact {
-  padding: 100px 0 60px;
+  padding: 110px 0 70px;
+  background: var(--paper-bg);
+}
+
+.contact h2 {
+  color: var(--paper-text);
+}
+
+.contact .section-subtitle {
+  color: var(--paper-text-secondary);
 }
 
 .contact form {
@@ -390,15 +422,55 @@
   margin: 0 auto;
 }
 
+.contact .field label {
+  color: var(--paper-text-secondary);
+}
+
+.contact .field input,
+.contact .field textarea {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: var(--paper-border);
+  color: var(--paper-text);
+}
+
+.contact .field input:focus,
+.contact .field textarea:focus {
+  border-color: var(--paper-accent);
+}
+
+.contact .field-error {
+  color: var(--paper-accent);
+}
+
+.contact .interest-fieldset legend {
+  color: var(--paper-text-secondary);
+}
+
+.contact .interest-fieldset label {
+  background: rgba(255, 255, 255, 0.45);
+  border-color: var(--paper-border);
+  color: var(--paper-text-secondary);
+}
+
+.contact .interest-fieldset label:hover {
+  border-color: var(--paper-accent);
+  color: var(--paper-text);
+}
+
+.contact .interest-fieldset label:has(input:checked) {
+  background: var(--paper-accent);
+  color: #fdf6ee;
+}
+
 .contact-success {
   max-width: 560px;
   margin: 0 auto;
   text-align: center;
   padding: 40px 24px;
-  background: var(--glass-bg);
-  border: 1px solid var(--accent-blue);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--paper-accent);
   border-radius: 16px;
-  color: var(--text-primary);
+  color: var(--paper-text);
 }
 
 .site-footer {

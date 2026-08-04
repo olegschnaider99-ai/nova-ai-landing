@@ -13,6 +13,13 @@
     grid-column: span 2;
     grid-row: span 1;
   }
+  /* Card is no longer tall once it drops to a single row — the preview's
+     flex:1 has nothing to fill, so give it a fixed height instead. */
+  .service-card-preview {
+    flex: none;
+    height: 160px;
+    margin-top: 16px;
+  }
   .services-grid .service-card:nth-child(6) {
     grid-column: span 2;
   }

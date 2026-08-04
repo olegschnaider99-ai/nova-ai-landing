@@ -18,4 +18,12 @@
   --border-glass: rgba(255, 255, 255, 0.16);
   --font-heading: 'Exo 2', sans-serif;
   --font-body: 'Manrope', sans-serif;
+
+  /* Paper — a single deliberate light break in an otherwise all-dark
+     site, used only for Contact. A hard color-block cut, not a gradient. */
+  --paper-bg: #f4ebe0;
+  --paper-text: #2b1d15;
+  --paper-text-secondary: #6e5c4d;
+  --paper-border: rgba(43, 29, 21, 0.16);
+  --paper-accent: #b23a2e;
 }

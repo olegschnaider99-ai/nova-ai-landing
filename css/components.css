@@ -81,8 +81,7 @@
   font-weight: 600;
   color: var(--text-primary);
   background: var(--glass-bg);
-  border: 1px solid rgba(255, 171, 143, 0.4);
-  box-shadow: 0 0 10px rgba(255, 171, 143, 0.15);
+  border: 1px solid rgba(255, 171, 143, 0.35);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   transition: all 0.2s ease;
@@ -340,17 +339,16 @@
   transition: transform 0.25s ease;
 }
 
+/* Static ring, not a spinning gradient — the rotating-border treatment
+   is the signature move reserved for the primary hero CTA; repeating it
+   here read as "everything glows/spins", a template tell. */
 .floating-cta::before {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 2px;
-  background: conic-gradient(from var(--angle, 0deg), var(--accent-blue), var(--accent-violet), var(--accent-blue), var(--accent-teal), var(--accent-blue));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  animation: spin 4s linear infinite;
+  border: 1.5px solid var(--accent-blue);
+  opacity: 0.7;
 }
 
 .floating-cta svg {
