@@ -1,4 +1,4 @@
-const STAR_COLORS = ['255,255,255', '214,225,255', '255,244,224'];
+const STAR_COLORS = ['255,255,255', '255,238,224', '255,209,181'];
 
 function generateStars(width, height) {
   const density = width < 768 ? 0.00022 : 0.00032;

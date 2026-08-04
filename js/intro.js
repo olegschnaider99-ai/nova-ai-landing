@@ -39,7 +39,7 @@ function runParticleAnimation(canvas, overlay) {
   resize();
   window.addEventListener('resize', resize);
 
-  const PARTICLE_COLORS = ['255, 255, 255', '255, 255, 255', '255, 255, 255', '155, 95, 224', '95, 196, 255', '224, 95, 176'];
+  const PARTICLE_COLORS = ['255, 255, 255', '255, 255, 255', '255, 255, 255', '255, 107, 74', '255, 171, 143', '224, 80, 58'];
 
   // A dense, uniformly-distributed starfield covering the whole screen
   // from frame one — this is the actual "sky", not a handful of dots.
@@ -96,9 +96,9 @@ function runParticleAnimation(canvas, overlay) {
       width / 2, height * 0.35, 0,
       width / 2, height * 0.35, Math.max(width, height) * 0.75
     );
-    bg.addColorStop(0, '#170a2e');
-    bg.addColorStop(0.55, '#0a0414');
-    bg.addColorStop(1, '#030106');
+    bg.addColorStop(0, '#14100d');
+    bg.addColorStop(0.55, '#070605');
+    bg.addColorStop(1, '#030202');
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, width, height);
 

@@ -41,7 +41,7 @@
   color: var(--text-secondary);
   background: var(--glass-bg);
   border: 1px solid var(--border-glass);
-  box-shadow: 0 0 10px rgba(155, 95, 224, 0.12);
+  box-shadow: 0 0 10px rgba(255, 107, 74, 0.12);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   transition: all 0.2s ease;
@@ -50,8 +50,8 @@
 .main-nav a:hover {
   color: var(--text-primary);
   border-color: var(--accent-violet);
-  background: rgba(155, 95, 224, 0.14);
-  box-shadow: 0 0 16px rgba(155, 95, 224, 0.4);
+  background: rgba(255, 107, 74, 0.14);
+  box-shadow: 0 0 16px rgba(255, 107, 74, 0.4);
 }
 
 .lang-toggle {
@@ -82,7 +82,7 @@
   width: min(900px, 130vw);
   height: min(900px, 130vw);
   transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(155, 95, 224, 0.28) 0%, rgba(95, 196, 255, 0.12) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 107, 74, 0.28) 0%, rgba(255, 171, 143, 0.12) 40%, transparent 70%);
   filter: blur(10px);
   pointer-events: none;
   z-index: 0;
@@ -109,13 +109,13 @@
   font-weight: 600;
   letter-spacing: 0.3px;
   margin-bottom: 24px;
-  box-shadow: 0 0 20px rgba(155, 95, 224, 0.15);
+  box-shadow: 0 0 20px rgba(255, 107, 74, 0.15);
 }
 
 .hero h1 {
   font-size: clamp(32px, 5.5vw, 56px);
   margin-bottom: 16px;
-  text-shadow: 0 0 60px rgba(155, 95, 224, 0.35);
+  text-shadow: 0 0 60px rgba(255, 107, 74, 0.35);
 }
 
 .hero-subtitle {
@@ -252,7 +252,7 @@
 .portfolio-card--3 { background: conic-gradient(from 90deg, var(--accent-blue), var(--accent-violet), var(--accent-teal), var(--accent-blue)); }
 .portfolio-card--4 { background: radial-gradient(ellipse at 50% 20%, var(--accent-violet), var(--bg-deep) 70%); }
 .portfolio-card--5 { background: linear-gradient(160deg, var(--accent-blue-2), var(--bg-deep)); }
-.portfolio-card--6 { background: repeating-linear-gradient(45deg, var(--bg-mid), var(--bg-mid) 12px, rgba(95,196,255,0.15) 12px, rgba(95,196,255,0.15) 24px); }
+.portfolio-card--6 { background: repeating-linear-gradient(45deg, var(--bg-mid), var(--bg-mid) 12px, rgba(255, 171, 143,0.15) 12px, rgba(255, 171, 143,0.15) 24px); }
 
 .process {
   padding: 100px 0;
