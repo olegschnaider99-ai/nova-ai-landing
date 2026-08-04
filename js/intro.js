@@ -39,32 +39,33 @@ function runParticleAnimation(canvas, overlay) {
   resize();
   window.addEventListener('resize', resize);
 
-  const PARTICLE_COLORS = ['155, 95, 224', '95, 196, 255', '224, 95, 176'];
+  const PARTICLE_COLORS = ['255, 255, 255', '255, 255, 255', '255, 255, 255', '155, 95, 224', '95, 196, 255', '224, 95, 176'];
 
-  // A dim, static backdrop starfield so the scene reads as "space" from
-  // frame one, not just a handful of moving dots on a flat fill.
-  const backdropStarCount = window.innerWidth < 768 ? 120 : 260;
-  const backdropStars = Array.from({ length: backdropStarCount }, () => ({
-    x: Math.random() * width,
-    y: Math.random() * height,
-    radius: Math.random() * 1.1 + 0.3,
-    opacity: 0.2 + Math.random() * 0.4
-  }));
+  // A dense, uniformly-distributed starfield covering the whole screen
+  // from frame one — this is the actual "sky", not a handful of dots.
+  const isMobile = window.innerWidth < 768;
+  const starCount = isMobile ? 260 : 520;
+  const sigma = width * (isMobile ? 0.16 : 0.13);
 
-  const particleCount = window.innerWidth < 768 ? 90 : 200;
-  const particles = Array.from({ length: particleCount }, () => {
-    const side = Math.random() < 0.5 ? -1 : 1;
-    const isGlow = Math.random() < 0.08;
+  const stars = Array.from({ length: starCount }, () => {
+    const originX = Math.random() * width;
     // Triangular distribution biases particles toward vertical center,
     // reading as a galactic plane rather than a uniform random scatter.
     const y = ((Math.random() + Math.random()) / 2) * height;
+    const dx = originX - width / 2;
+    const direction = dx === 0 ? (Math.random() < 0.5 ? -1 : 1) : Math.sign(dx);
+    // Gaussian falloff: stars near the center line get pushed hard open,
+    // stars already far from center barely move — a seam splitting the
+    // sky apart, not two clumps sliding away from a narrow starting band.
+    const falloff = Math.exp(-((dx * dx) / (2 * sigma * sigma)));
+    const isGlow = Math.random() < 0.05;
     return {
-      side,
-      startX: width / 2 + side * (10 + Math.random() * 20),
+      originX,
       y,
-      radius: isGlow ? 2.4 + Math.random() * 1.8 : Math.random() * 1.6 + 0.4,
-      speed: 0.5 + Math.random() * 0.5,
-      opacity: isGlow ? 0.7 + Math.random() * 0.3 : 0.4 + Math.random() * 0.6,
+      direction,
+      falloff,
+      radius: isGlow ? 1.8 + Math.random() * 1.4 : Math.random() * 1.3 + 0.3,
+      opacity: isGlow ? 0.75 + Math.random() * 0.25 : 0.35 + Math.random() * 0.5,
       color: PARTICLE_COLORS[Math.floor(Math.random() * PARTICLE_COLORS.length)],
       isGlow
     };
@@ -101,31 +102,28 @@ function runParticleAnimation(canvas, overlay) {
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, width, height);
 
-    backdropStars.forEach((s) => {
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255, 255, 255, ${s.opacity})`;
-      ctx.fill();
-    });
+    const maxPush = width * 0.55;
 
-    particles.forEach((p) => {
-      const travel = eased * (width / 2) * p.speed;
-      const x = p.startX + p.side * travel;
-      const alpha = p.opacity * (1 - eased * 0.3);
+    stars.forEach((s) => {
+      const push = eased * maxPush * s.falloff;
+      const x = s.originX + s.direction * push;
+      // Stars swept through the opening seam fade slightly as they go,
+      // rather than the whole field dimming uniformly.
+      const alpha = s.opacity * (1 - s.falloff * eased * 0.35);
 
-      if (p.isGlow) {
-        const glow = ctx.createRadialGradient(x, p.y, 0, x, p.y, p.radius * 6);
-        glow.addColorStop(0, `rgba(${p.color}, ${alpha * 0.4})`);
+      if (s.isGlow) {
+        const glow = ctx.createRadialGradient(x, s.y, 0, x, s.y, s.radius * 4.5);
+        glow.addColorStop(0, `rgba(${s.color}, ${alpha * 0.35})`);
         glow.addColorStop(1, 'rgba(0,0,0,0)');
         ctx.fillStyle = glow;
         ctx.beginPath();
-        ctx.arc(x, p.y, p.radius * 6, 0, Math.PI * 2);
+        ctx.arc(x, s.y, s.radius * 4.5, 0, Math.PI * 2);
         ctx.fill();
       }
 
       ctx.beginPath();
-      ctx.arc(x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${p.color}, ${alpha})`;
+      ctx.arc(x, s.y, s.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${s.color}, ${alpha})`;
       ctx.fill();
     });
 
