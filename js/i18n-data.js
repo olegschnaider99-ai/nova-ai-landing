@@ -10,12 +10,12 @@ export const dictionary = {
   'hero.eyebrow': { ua: 'AI-креатор агентство', en: 'AI-Creator Agency' },
   'hero.title': { ua: 'Твоя ідея заслуговує вибухового старту', en: 'Your idea deserves an explosive start' },
   'hero.subtitle': { ua: 'Ми запускаємо її в реальність за допомогою AI', en: 'We launch it into reality with AI' },
-  'hero.description': { ua: "AI-креатор агентство, що перетворює ваші ідеї на візуали, відео та контент, готові підкорювати аудиторію.", en: 'An AI-creator agency turning your ideas into visuals, video and content ready to win over your audience.' },
+  'hero.description': { ua: "AI-креатор агентство: перетворюємо ідеї на візуали, відео та тексти, з якими одразу можна запускати кампанію.", en: 'An AI-creator agency: we turn ideas into visuals, video and copy ready to launch a campaign with, not just look at.' },
   'hero.ctaPrimary': { ua: 'Залишити заявку', en: 'Get in touch' },
   'hero.ctaSecondary': { ua: 'Дізнатись більше', en: 'Learn more' },
 
   'about.title': { ua: 'Про нас', en: 'About us' },
-  'about.text': { ua: "Nova AI — команда, що поєднує креативність людини з можливостями штучного інтелекту. Ми створюємо візуали, відео та контент, які виглядають так, ніби над ними працювала ціла студія — швидше і доступніше.", en: 'Nova AI is a team that combines human creativity with the power of artificial intelligence. We create visuals, video and content that look like the work of a full studio — faster and more accessible.' },
+  'about.text': { ua: "Nova AI — команда дизайнерів, копірайтерів і AI-інженерів. Ми беремо ваш бриф і за лічені дні повертаємо готові візуали, відео чи тексти — рівень студії, темп значно швидший.", en: 'Nova AI is a team of designers, copywriters and AI engineers. We take your brief and turn around finished visuals, video or copy in days — studio-level output, at a much faster pace.' },
 
   'services.title': { ua: 'Послуги', en: 'Services' },
   'services.subtitle': { ua: "Повний цикл AI-креативу для вашого бренду", en: 'A full cycle of AI-powered creative for your brand' },
@@ -30,7 +30,7 @@ export const dictionary = {
   'services.items.automation.title': { ua: 'AI-автоматизація та боти', en: 'AI Automation & Bots' },
   'services.items.automation.subtitle': { ua: 'Робота, що триває навіть уночі', en: 'Work that never sleeps' },
   'services.items.copywriting.title': { ua: 'AI-копірайтинг', en: 'AI Copywriting' },
-  'services.items.copywriting.subtitle': { ua: 'Тексти, що продають, а не просто заповнюють простір', en: 'Words that sell, not just fill space' },
+  'services.items.copywriting.subtitle': { ua: 'Слова, які продають', en: 'Words that sell' },
   'services.items.consulting.title': { ua: 'Консалтинг з впровадження AI', en: 'AI Consulting' },
   'services.items.consulting.subtitle': { ua: 'Перший крок до AI без хаосу', en: 'Your first step into AI, without the chaos' },
 
@@ -58,7 +58,7 @@ export const dictionary = {
 
   'advantages.title': { ua: 'Переваги', en: 'Why Nova AI' },
   'advantages.items.1.title': { ua: 'Швидкість завдяки AI', en: 'Speed powered by AI' },
-  'advantages.items.1.desc': { ua: 'Результат у рази швидше за традиційний підхід', en: 'Results many times faster than a traditional approach' },
+  'advantages.items.1.desc': { ua: 'Перший варіант бачите вже за кілька днів, а не тижні', en: 'You see the first draft in days, not weeks' },
   'advantages.items.2.title': { ua: 'Індивідуальний підхід', en: 'A tailored approach' },
   'advantages.items.2.desc': { ua: 'Кожен проєкт під ваш бренд, без шаблонів', en: 'Every project built around your brand, no templates' },
   'advantages.items.3.title': { ua: 'Все в одному місці', en: 'Everything in one place' },
@@ -66,7 +66,7 @@ export const dictionary = {
   'advantages.items.4.title': { ua: 'Прозорість процесу', en: 'A transparent process' },
   'advantages.items.4.desc': { ua: 'Узгоджуємо кожен крок разом з вами', en: 'We align on every step together with you' },
   'advantages.items.5.title': { ua: 'Сучасні AI-інструменти', en: 'Cutting-edge AI tools' },
-  'advantages.items.5.desc': { ua: 'Використовуємо найновіші моделі та технології', en: 'We use the latest models and technologies' },
+  'advantages.items.5.desc': { ua: 'Тестуємо нові AI-моделі одразу, як вони виходять, і додаємо в роботу те, що дійсно працює', en: 'We test new AI models as soon as they ship and put what actually works into production' },
 
   'contact.title': { ua: 'Залишити заявку', en: 'Get in touch' },
   'contact.subtitle': { ua: 'Розкажіть про свою ідею — ми зв\'яжемось найближчим часом', en: "Tell us about your idea — we'll be in touch shortly" },
@@ -79,7 +79,7 @@ export const dictionary = {
   'contact.errorRequired': { ua: "Заповніть це поле", en: 'Please fill in this field' },
   'contact.errorEmail': { ua: 'Введіть коректний email або телефон', en: 'Enter a valid email or phone number' },
 
-  'footer.tagline': { ua: 'Творимо майбутнє за допомогою штучного інтелекту', en: 'Building the future with artificial intelligence' },
+  'footer.tagline': { ua: 'Ідея → AI → результат', en: 'Idea → AI → result' },
   'footer.copyright': { ua: '© 2026 Nova AI. Усі права захищено.', en: '© 2026 Nova AI. All rights reserved.' },
 
   'serviceDetail.back': { ua: '← Усі послуги', en: '← All services' },
@@ -145,7 +145,7 @@ export const dictionary = {
   'service.automation.steps.3': { ua: 'Тестування і запуск з моніторингом', en: 'Testing and launch with monitoring' },
 
   'service.copywriting.title': { ua: 'AI-копірайтинг', en: 'AI Copywriting' },
-  'service.copywriting.tagline': { ua: 'Тексти, що продають, а не просто заповнюють простір', en: 'Words that sell, not just fill space' },
+  'service.copywriting.tagline': { ua: 'Слова, які продають', en: 'Words that sell' },
   'service.copywriting.intro': { ua: 'Пишемо тексти для сайтів, реклами та розсилок за допомогою AI, з обов\'язковою редакторською перевіркою — щоб звучало природно й переконливо.', en: 'We write website, ad, and email copy with AI, always followed by editorial review — so it reads natural and persuasive, never generic.' },
   'service.copywriting.included.0': { ua: 'Тексти для сайту та лендингів', en: 'Website and landing page copy' },
   'service.copywriting.included.1': { ua: 'Рекламні тексти й сценарії', en: 'Ad copy and scripts' },
