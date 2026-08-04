@@ -4,6 +4,9 @@ import { initStickyHeader } from './nav.js';
 import { initServiceChips, applyInterestFromQueryParam } from './services.js';
 import { initContactForm } from './form.js';
 import { initStarfield } from './starfield.js';
+import { initScrollReveal } from './scroll-reveal.js';
+import { initMagneticButtons } from './magnetic.js';
+import { initCursorGlow } from './cursor-glow.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initStarfield();
@@ -13,4 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initServiceChips();
   applyInterestFromQueryParam();
   initContactForm(getCurrentLang);
+  initScrollReveal();
+  initMagneticButtons();
+  initCursorGlow();
 });
