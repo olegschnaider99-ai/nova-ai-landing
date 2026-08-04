@@ -26,6 +26,15 @@
   .hero h1 {
     font-size: 32px;
   }
+  /* Desktop centers hero content in 100vh, which on a tall narrow
+     phone screen pushes the heading ~1/4 down the page and reads as
+     a large empty gap above it. Anchor near the top instead. */
+  .hero {
+    min-height: auto;
+    align-items: flex-start;
+    padding-top: 96px;
+    padding-bottom: 48px;
+  }
 }
 
 @media (max-width: 480px) {

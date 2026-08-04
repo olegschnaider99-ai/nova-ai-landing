@@ -43,8 +43,9 @@ export function initStarfield() {
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
   let stars = [];
+  let lastWidth = window.innerWidth;
 
-  function resize() {
+  function fitCanvas() {
     const width = window.innerWidth;
     const height = window.innerHeight;
     canvas.width = width * dpr;
@@ -52,16 +53,36 @@ export function initStarfield() {
     canvas.style.width = width + 'px';
     canvas.style.height = height + 'px';
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function regenerate() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
     stars = generateStars(width, height);
     drawStars(ctx, stars, width, height);
   }
 
-  resize();
+  fitCanvas();
+  regenerate();
 
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(resize, 200);
+    resizeTimer = setTimeout(() => {
+      // Mobile browsers fire `resize` when the address bar collapses or
+      // expands on scroll — that only changes innerHeight, never
+      // innerWidth. Only a real width change (rotation, real resize)
+      // warrants a fresh star field; anything else just needs the canvas
+      // re-fitted and the existing stars redrawn so they don't visibly
+      // reshuffle every time the visitor scrolls.
+      fitCanvas();
+      if (window.innerWidth !== lastWidth) {
+        lastWidth = window.innerWidth;
+        regenerate();
+      } else {
+        drawStars(ctx, stars, window.innerWidth, window.innerHeight);
+      }
+    }, 200);
   });
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
