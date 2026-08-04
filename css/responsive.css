@@ -1,6 +1,27 @@
 @media (max-width: 1024px) {
-  .services-grid, .portfolio-grid, .advantages-grid {
+  .services-grid, .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .services-grid .service-card:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .services-grid .service-card:nth-child(6) {
+    grid-column: span 2;
+  }
+  .portfolio-card--1 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .portfolio-card--4 {
+    grid-row: span 1;
+  }
+  .advantage-item {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .advantage-item h3 {
+    width: auto;
   }
   .process-timeline {
     grid-template-columns: repeat(1, 1fr);
@@ -20,8 +41,15 @@
   .main-nav {
     display: none;
   }
-  .services-grid, .portfolio-grid, .advantages-grid {
+  .services-grid, .portfolio-grid {
     grid-template-columns: 1fr;
+  }
+  .services-grid .service-card:nth-child(1),
+  .services-grid .service-card:nth-child(6),
+  .portfolio-card--1,
+  .portfolio-card--4 {
+    grid-column: span 1;
+    grid-row: span 1;
   }
   .hero h1 {
     font-size: 32px;
