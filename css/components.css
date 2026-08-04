@@ -16,7 +16,7 @@
   border-radius: 999px;
   color: var(--text-primary);
   background: linear-gradient(180deg, rgba(120, 200, 255, 0.16), rgba(60, 140, 220, 0.08));
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 26px rgba(155, 95, 224, 0.35);
   isolation: isolate;
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;

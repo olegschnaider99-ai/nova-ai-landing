@@ -7,6 +7,7 @@ export const dictionary = {
   'nav.process': { ua: 'Процес', en: 'Process' },
   'nav.contact': { ua: 'Контакти', en: 'Contact' },
 
+  'hero.eyebrow': { ua: 'AI-креатор агентство', en: 'AI-Creator Agency' },
   'hero.title': { ua: 'Твоя ідея заслуговує вибухового старту', en: 'Your idea deserves an explosive start' },
   'hero.subtitle': { ua: 'Ми запускаємо її в реальність за допомогою AI', en: 'We launch it into reality with AI' },
   'hero.description': { ua: "AI-креатор агентство, що перетворює ваші ідеї на візуали, відео та контент, готові підкорювати аудиторію.", en: 'An AI-creator agency turning your ideas into visuals, video and content ready to win over your audience.' },
