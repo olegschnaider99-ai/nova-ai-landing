@@ -36,6 +36,9 @@ export const dictionary = {
 
   'statement.text': { ua: 'Ми не продаємо AI заради AI. Ми продаємо результат, який AI допомагає створити швидше.', en: "We don't sell AI for AI's sake. We sell the result AI helps us reach faster." },
 
+  'poster.line1': { ua: 'Результат.', en: 'Result.' },
+  'poster.line2': { ua: 'Не обіцянки.', en: 'Not promises.' },
+
   'portfolio.title': { ua: 'Приклади робіт', en: 'Selected work' },
   'portfolio.subtitle': { ua: 'Візуали, відео та контент, створені за допомогою AI', en: 'Visuals, video and content created with AI' },
   'portfolio.items.1': { ua: 'AI-візуал · Абстрактна композиція', en: 'AI Visual · Abstract composition' },

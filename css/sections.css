@@ -401,6 +401,31 @@
   margin-bottom: 0;
 }
 
+/* Poster moment — one oversized typographic beat right before Contact,
+   the loudest text on the page after the hero. Second line reuses the
+   text-stroke outline treatment from the Advantages counters for
+   compositional variety instead of two lines of solid weight. */
+.poster {
+  padding: 50px 0 30px;
+}
+
+.poster-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(40px, 9vw, 108px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.poster-text span {
+  display: block;
+}
+
+.poster-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--accent-violet);
+}
+
 /* Contact is the one section that breaks out of the dark cosmic theme —
    a deliberate light "paper" close, not another glass panel. Everything
    else on the page is glow-on-dark; this is the one hard cut, on purpose. */
