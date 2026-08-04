@@ -34,8 +34,6 @@ export const dictionary = {
   'services.items.consulting.title': { ua: 'Консалтинг з впровадження AI', en: 'AI Consulting' },
   'services.items.consulting.subtitle': { ua: 'Перший крок до AI без хаосу', en: 'Your first step into AI, without the chaos' },
 
-  'statement.text': { ua: 'Ми не продаємо AI заради AI. Ми продаємо результат, який AI допомагає створити швидше.', en: "We don't sell AI for AI's sake. We sell the result AI helps us reach faster." },
-
   'poster.line1': { ua: 'Результат.', en: 'Result.' },
   'poster.line2': { ua: 'Не обіцянки.', en: 'Not promises.' },
 

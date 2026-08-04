@@ -228,26 +228,6 @@
   flex-shrink: 0;
 }
 
-/* Full-width statement — breaks the card-after-card rhythm between
-   Services and Portfolio with a plain editorial line, no icon, no glass. */
-.statement {
-  padding: 40px 0 80px;
-}
-
-.statement-block {
-  max-width: 760px;
-  padding-left: 28px;
-  border-left: 2px solid var(--accent-violet);
-}
-
-.statement-block p {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: clamp(21px, 3vw, 34px);
-  line-height: 1.4;
-  color: var(--text-primary);
-}
-
 .portfolio {
   padding: 100px 0;
 }
