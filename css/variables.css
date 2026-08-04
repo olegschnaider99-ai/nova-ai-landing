@@ -3,9 +3,9 @@
 :root {
   /* Monochrome Coral palette — near-black charcoal, one bold hue pushed
      across several tones instead of a multi-color (AI-tell) gradient */
-  --bg-deep: #070605;
-  --bg-mid: #14100d;
-  --bg-radial: radial-gradient(ellipse at 50% 20%, #14100d 0%, #070605 55%, #030202 100%);
+  --bg-deep: #050403;
+  --bg-mid: #0e0b08;
+  --bg-radial: radial-gradient(ellipse at 50% 20%, #0e0b08 0%, #050403 55%, #020101 100%);
   --accent-blue: #ffab8f;
   --accent-blue-2: #c23f28;
   --accent-violet: #ff6b4a;

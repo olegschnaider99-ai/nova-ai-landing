@@ -35,7 +35,7 @@ export const dictionary = {
   'services.items.consulting.subtitle': { ua: 'Перший крок до AI без хаосу', en: 'Your first step into AI, without the chaos' },
 
   'portfolio.title': { ua: 'Приклади робіт', en: 'Selected work' },
-  'portfolio.subtitle': { ua: 'Навчальні AI-візуали, що демонструють стиль подачі', en: 'Illustrative AI visuals demonstrating our creative style' },
+  'portfolio.subtitle': { ua: 'Візуали, відео та контент, створені за допомогою AI', en: 'Visuals, video and content created with AI' },
   'portfolio.items.1': { ua: 'AI-візуал · Абстрактна композиція', en: 'AI Visual · Abstract composition' },
   'portfolio.items.2': { ua: 'AI-візуал · Продуктова сцена', en: 'AI Visual · Product scene' },
   'portfolio.items.3': { ua: 'AI-моушн · Цикл переходів', en: 'AI Motion · Transition loop' },

@@ -82,7 +82,7 @@
   width: min(900px, 130vw);
   height: min(900px, 130vw);
   transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(255, 107, 74, 0.28) 0%, rgba(255, 171, 143, 0.12) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 107, 74, 0.14) 0%, rgba(255, 171, 143, 0.06) 40%, transparent 70%);
   filter: blur(10px);
   pointer-events: none;
   z-index: 0;
@@ -139,18 +139,27 @@
 
 .about {
   padding: 100px 0;
-  text-align: center;
+}
+
+/* Asymmetric editorial layout — heading and copy sit side by side
+   instead of the centered-stack pattern every other section uses. */
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: start;
 }
 
 .about h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 36px;
+  position: sticky;
+  top: 120px;
 }
 
 .about p {
-  max-width: 680px;
-  margin: 0 auto;
   color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1.7;
 }
 
 .services {
