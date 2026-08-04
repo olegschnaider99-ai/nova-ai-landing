@@ -21,9 +21,10 @@
 
   /* Paper — a single deliberate light break in an otherwise all-dark
      site, used only for Contact. A hard color-block cut, not a gradient. */
-  --paper-bg: #f4ebe0;
-  --paper-text: #2b1d15;
-  --paper-text-secondary: #6e5c4d;
-  --paper-border: rgba(43, 29, 21, 0.16);
+  --paper-bg: #c9b090;
+  --paper-text: #241a12;
+  --paper-text-secondary: #4a3a2a;
+  --paper-border: rgba(36, 26, 18, 0.22);
   --paper-accent: #b23a2e;
+  --paper-accent-text: #742419;
 }

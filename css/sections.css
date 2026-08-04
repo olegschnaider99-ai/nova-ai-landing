@@ -435,11 +435,11 @@
 
 .contact .field input:focus,
 .contact .field textarea:focus {
-  border-color: var(--paper-accent);
+  border-color: var(--paper-accent-text);
 }
 
 .contact .field-error {
-  color: var(--paper-accent);
+  color: var(--paper-accent-text);
 }
 
 .contact .interest-fieldset legend {
@@ -447,13 +447,13 @@
 }
 
 .contact .interest-fieldset label {
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.35);
   border-color: var(--paper-border);
   color: var(--paper-text-secondary);
 }
 
 .contact .interest-fieldset label:hover {
-  border-color: var(--paper-accent);
+  border-color: var(--paper-accent-text);
   color: var(--paper-text);
 }
 
@@ -467,8 +467,8 @@
   margin: 0 auto;
   text-align: center;
   padding: 40px 24px;
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid var(--paper-accent);
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid var(--paper-accent-text);
   border-radius: 16px;
   color: var(--paper-text);
 }

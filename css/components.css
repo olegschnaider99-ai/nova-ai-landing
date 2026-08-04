@@ -222,14 +222,21 @@
 }
 
 .service-detail-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--accent-blue);
   font-size: 13px;
   font-weight: 600;
   color: var(--accent-blue);
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .service-detail-link:hover {
-  color: var(--accent-violet);
+  color: var(--text-primary);
+  border-color: var(--accent-violet);
+  background: rgba(255, 107, 74, 0.14);
 }
 
 /* Form fields */
