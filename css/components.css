@@ -154,6 +154,20 @@
   .service-card, .service-card::before { transition: none; }
 }
 
+/* Index number per card, echoing the counters in Advantages — ties the
+   services grid into the same numbered-editorial system elsewhere. */
+.service-index {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--border-glass);
+  opacity: 0.6;
+}
+
 .service-icon {
   display: inline-flex;
   align-items: center;
@@ -217,26 +231,30 @@
 .service-card-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: nowrap;
 }
 
+/* Underlined text, not a second pill — "Обрати послугу" is the one real
+   button in the card; stacking two same-shaped pills read as clutter and
+   forced them onto separate lines in the narrower grid cards. */
 .service-detail-link {
   display: inline-flex;
   align-items: center;
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: 1px solid var(--accent-blue);
+  gap: 4px;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--accent-blue);
+  border-bottom: 1.5px solid rgba(255, 171, 143, 0.45);
+  padding-bottom: 1px;
+  white-space: nowrap;
   transition: all 0.2s ease;
 }
 
 .service-detail-link:hover {
-  color: var(--text-primary);
-  border-color: var(--accent-violet);
-  background: rgba(255, 107, 74, 0.14);
+  color: var(--accent-violet);
+  border-bottom-color: var(--accent-violet);
 }
 
 /* Form fields */
