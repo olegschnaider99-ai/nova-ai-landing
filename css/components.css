@@ -192,17 +192,15 @@
   border-radius: 14px;
 }
 
-/* Featured card preview — a real portfolio example fills the space
-   below the copy instead of sitting empty; ties the claim to proof. */
+/* Portfolio preview inside every service card — real proof of work
+   instead of icon+text alone. Fixed height by default; the featured
+   card (nth-child(1) override in sections.css) fills its tall span. */
 .service-card-preview {
-  flex: 1;
-  min-height: 0;
-  margin-top: 24px;
+  height: 150px;
+  margin-top: 20px;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border-glass);
-  mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
 }
 
 .service-card-preview img {

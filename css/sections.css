@@ -216,6 +216,15 @@
   font-size: 15px;
 }
 
+.services-grid .service-card:nth-child(1) .service-card-preview {
+  flex: 1;
+  min-height: 0;
+  height: auto;
+  margin-top: 24px;
+  mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+}
+
 .services-grid .service-card:nth-child(6) {
   grid-column: 1 / -1;
   display: flex;

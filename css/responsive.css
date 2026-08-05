@@ -14,8 +14,10 @@
     grid-row: span 1;
   }
   /* Card is no longer tall once it drops to a single row — the preview's
-     flex:1 has nothing to fill, so give it a fixed height instead. */
-  .service-card-preview {
+     flex:1 has nothing to fill, so give it a fixed height instead.
+     Matches the nth-child(1) selector specificity in sections.css so
+     this override actually wins at this breakpoint. */
+  .services-grid .service-card:nth-child(1) .service-card-preview {
     flex: none;
     height: 160px;
     margin-top: 16px;
