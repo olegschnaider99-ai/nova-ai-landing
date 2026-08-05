@@ -26,7 +26,7 @@
   font-size: 13px;
   color: var(--text-secondary);
   margin-bottom: 32px;
-  transition: color 0.2s ease;
+  transition: color 0.2s var(--ease-out);
 }
 
 /* Same invisible hit-area expansion as .service-detail-link. */
@@ -180,11 +180,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s var(--ease-out);
 }
 
 .service-detail-gallery-item:hover img {
-  transform: scale(1.06);
+  transform: scale(1.03);
 }
 
 .related-services-grid {
@@ -205,12 +205,12 @@
   font-size: 14px;
   font-weight: 600;
   color: var(--text-primary);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
 }
 
 .related-service-link span:last-child {
   color: var(--accent-blue);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s var(--ease-out);
 }
 
 .related-service-link:hover {

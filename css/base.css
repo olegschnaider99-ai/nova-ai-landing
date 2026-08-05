@@ -2,22 +2,31 @@
 
 html { scroll-behavior: smooth; }
 
-/* Scroll-reveal: sections fade + rise into place instead of just
-   being there — js/scroll-reveal.js adds .is-visible via
-   IntersectionObserver as each one enters the viewport. */
-.reveal {
+/* Scroll-reveal: the camera discovers content, it doesn't pop in —
+   opacity + a small rise, applied per direct child so a group (a grid
+   of cards, a list of steps) arrives with a musical cadence instead
+   of one mechanical block-fade. js/scroll-reveal.js only ever adds
+   .is-visible to the parent .reveal element; this is CSS-only. */
+.reveal > * {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(16px);
+  transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
 }
 
-.reveal.is-visible {
+.reveal.is-visible > * {
   opacity: 1;
   transform: translateY(0);
 }
 
+.reveal.is-visible > *:nth-child(1) { transition-delay: 0s; }
+.reveal.is-visible > *:nth-child(2) { transition-delay: 0.06s; }
+.reveal.is-visible > *:nth-child(3) { transition-delay: 0.12s; }
+.reveal.is-visible > *:nth-child(4) { transition-delay: 0.18s; }
+.reveal.is-visible > *:nth-child(5) { transition-delay: 0.24s; }
+.reveal.is-visible > *:nth-child(6) { transition-delay: 0.3s; }
+
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal > * {
     transition: none;
   }
 }

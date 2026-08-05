@@ -25,4 +25,14 @@
   --paper-border: rgba(36, 26, 18, 0.22);
   --paper-accent: #b23a2e;
   --paper-accent-text: #742419;
+
+  /* One motion system for the whole site. -out is the default for
+     nearly everything: quick start, soft stop, never a mechanical
+     linear crawl or an abrupt snap. -calm is reserved for the two
+     places that should feel slower than the rest (Contact fields). */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.2s;
+  --dur-medium: 0.4s;
+  --dur-slow: 0.7s;
+  --dur-calm: 0.3s;
 }

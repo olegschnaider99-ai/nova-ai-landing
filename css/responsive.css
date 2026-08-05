@@ -71,7 +71,7 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: transform 0.3s ease, opacity 0.25s ease, visibility 0.3s;
+    transition: transform var(--dur-calm) var(--ease-out), opacity var(--dur-calm) var(--ease-out), visibility var(--dur-calm);
   }
   .main-nav.is-open {
     transform: scaleY(1);
