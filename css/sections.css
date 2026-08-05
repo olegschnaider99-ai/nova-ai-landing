@@ -450,18 +450,18 @@
   margin-bottom: 0;
 }
 
-/* Poster moment — one oversized typographic beat right before Contact,
-   the loudest text on the page after the hero. Second line reuses the
-   text-stroke outline treatment from the Advantages counters for
-   compositional variety instead of two lines of solid weight. */
+/* Poster moment — the emotional climax of the page, not a transitional
+   beat. It previously had the least padding of any section despite
+   being the loudest; now it has the most — a held breath before the
+   ask, with room on both sides so the statement stands alone. */
 .poster {
-  padding: 50px 0 30px;
+  padding: 180px 0;
 }
 
 .poster-text {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: clamp(40px, 9vw, 108px);
+  font-size: clamp(44px, 10.5vw, 128px);
   line-height: 1.05;
   letter-spacing: -0.02em;
 }
@@ -479,7 +479,7 @@
    a deliberate light "paper" close, not another glass panel. Everything
    else on the page is glow-on-dark; this is the one hard cut, on purpose. */
 .contact {
-  padding: 110px 0 70px;
+  padding: 140px 0 100px;
   background: var(--paper-bg);
 }
 
