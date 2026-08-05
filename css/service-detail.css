@@ -21,11 +21,22 @@
 }
 
 .back-link {
+  position: relative;
   display: inline-block;
   font-size: 13px;
   color: var(--text-secondary);
   margin-bottom: 32px;
   transition: color 0.2s ease;
+}
+
+/* Same invisible hit-area expansion as .service-detail-link. */
+.back-link::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -6px;
+  right: -6px;
 }
 
 .back-link:hover {

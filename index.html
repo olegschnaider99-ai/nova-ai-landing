@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,9 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="uk_UA">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
@@ -55,6 +58,7 @@
       <p class="hero-description" data-i18n="hero.description">AI-креатор агентство, що перетворює ваші ідеї на візуали, відео та контент, готові підкорювати аудиторію.</p>
       <div class="hero-actions">
         <a href="#services" class="btn btn-primary" data-i18n="hero.ctaSecondary">Дізнатись більше</a>
+        <a href="#contact" class="btn btn-secondary" data-i18n="hero.ctaPrimary">Залишити заявку</a>
       </div>
     </div>
   </section>
@@ -79,7 +83,7 @@
           <p data-i18n="services.items.visuals.subtitle">Бренд, який запам'ятовується з першого погляду</p>
           <div class="service-card-actions">
             <a href="ai-visuals.html" class="service-detail-link" data-i18n="serviceDetail.learnMoreLink">Детальніше →</a>
-            <button class="btn-chip" data-service-chip="visuals" type="button" data-i18n="services.cta">Обрати послугу</button>
+            <button class="btn-chip" data-service-chip="visuals" type="button" data-i18n="services.cta" data-i18n-aria="services.items.visuals.ariaChoose" aria-label="Обрати послугу: AI-генерація візуалів та брендинг">Обрати послугу</button>
           </div>
           <div class="service-card-preview" aria-hidden="true"><img src="images/portfolio/portfolio-1.jpg" alt="" loading="lazy"></div>
         </article>
@@ -91,7 +95,7 @@
           <p data-i18n="services.items.video.subtitle">Відео, що говорить голосніше за слова</p>
           <div class="service-card-actions">
             <a href="ai-video.html" class="service-detail-link" data-i18n="serviceDetail.learnMoreLink">Детальніше →</a>
-            <button class="btn-chip" data-service-chip="video" type="button" data-i18n="services.cta">Обрати послугу</button>
+            <button class="btn-chip" data-service-chip="video" type="button" data-i18n="services.cta" data-i18n-aria="services.items.video.ariaChoose" aria-label="Обрати послугу: AI-відео та моушн-дизайн">Обрати послугу</button>
           </div>
           <div class="service-card-preview" aria-hidden="true"><img src="images/portfolio/portfolio-3.jpg" alt="" loading="lazy"></div>
         </article>
@@ -103,7 +107,7 @@
           <p data-i18n="services.items.social.subtitle">Контент, який не пролистають повз</p>
           <div class="service-card-actions">
             <a href="ai-social.html" class="service-detail-link" data-i18n="serviceDetail.learnMoreLink">Детальніше →</a>
-            <button class="btn-chip" data-service-chip="social" type="button" data-i18n="services.cta">Обрати послугу</button>
+            <button class="btn-chip" data-service-chip="social" type="button" data-i18n="services.cta" data-i18n-aria="services.items.social.ariaChoose" aria-label="Обрати послугу: AI-контент для соцмереж">Обрати послугу</button>
           </div>
           <div class="service-card-preview" aria-hidden="true"><img src="images/portfolio/portfolio-5.jpg" alt="" loading="lazy"></div>
         </article>
@@ -115,7 +119,7 @@
           <p data-i18n="services.items.automation.subtitle">Робота, що триває навіть уночі</p>
           <div class="service-card-actions">
             <a href="ai-automation.html" class="service-detail-link" data-i18n="serviceDetail.learnMoreLink">Детальніше →</a>
-            <button class="btn-chip" data-service-chip="automation" type="button" data-i18n="services.cta">Обрати послугу</button>
+            <button class="btn-chip" data-service-chip="automation" type="button" data-i18n="services.cta" data-i18n-aria="services.items.automation.ariaChoose" aria-label="Обрати послугу: AI-автоматизація та боти">Обрати послугу</button>
           </div>
           <div class="service-card-preview" aria-hidden="true"><img src="images/portfolio/portfolio-2.jpg" alt="" loading="lazy"></div>
         </article>
@@ -127,7 +131,7 @@
           <p data-i18n="services.items.copywriting.subtitle">Слова, які продають</p>
           <div class="service-card-actions">
             <a href="ai-copywriting.html" class="service-detail-link" data-i18n="serviceDetail.learnMoreLink">Детальніше →</a>
-            <button class="btn-chip" data-service-chip="copywriting" type="button" data-i18n="services.cta">Обрати послугу</button>
+            <button class="btn-chip" data-service-chip="copywriting" type="button" data-i18n="services.cta" data-i18n-aria="services.items.copywriting.ariaChoose" aria-label="Обрати послугу: AI-копірайтинг">Обрати послугу</button>
           </div>
           <div class="service-card-preview" aria-hidden="true"><img src="images/portfolio/portfolio-4.jpg" alt="" loading="lazy"></div>
         </article>
@@ -139,7 +143,7 @@
           <p data-i18n="services.items.consulting.subtitle">Перший крок до AI без хаосу</p>
           <div class="service-card-actions">
             <a href="ai-consulting.html" class="service-detail-link" data-i18n="serviceDetail.learnMoreLink">Детальніше →</a>
-            <button class="btn-chip" data-service-chip="consulting" type="button" data-i18n="services.cta">Обрати послугу</button>
+            <button class="btn-chip" data-service-chip="consulting" type="button" data-i18n="services.cta" data-i18n-aria="services.items.consulting.ariaChoose" aria-label="Обрати послугу: Консалтинг з впровадження AI">Обрати послугу</button>
           </div>
         </article>
 
@@ -180,11 +184,11 @@
     <div class="container">
       <h2 data-i18n="advantages.title">Переваги</h2>
       <div class="advantages-grid reveal">
-        <div class="advantage-item"><h3 data-i18n="advantages.items.1.title">Швидкість завдяки AI</h3><p data-i18n="advantages.items.1.desc">Результат у рази швидше за традиційний підхід</p></div>
+        <div class="advantage-item"><h3 data-i18n="advantages.items.1.title">Швидкість завдяки AI</h3><p data-i18n="advantages.items.1.desc">Перший варіант бачите вже за кілька днів, а не тижні</p></div>
         <div class="advantage-item"><h3 data-i18n="advantages.items.2.title">Індивідуальний підхід</h3><p data-i18n="advantages.items.2.desc">Кожен проєкт під ваш бренд, без шаблонів</p></div>
         <div class="advantage-item"><h3 data-i18n="advantages.items.3.title">Все в одному місці</h3><p data-i18n="advantages.items.3.desc">Візуал, відео, текст і автоматизація в одній команді</p></div>
         <div class="advantage-item"><h3 data-i18n="advantages.items.4.title">Прозорість процесу</h3><p data-i18n="advantages.items.4.desc">Узгоджуємо кожен крок разом з вами</p></div>
-        <div class="advantage-item"><h3 data-i18n="advantages.items.5.title">Сучасні AI-інструменти</h3><p data-i18n="advantages.items.5.desc">Використовуємо найновіші моделі та технології</p></div>
+        <div class="advantage-item"><h3 data-i18n="advantages.items.5.title">Сучасні AI-інструменти</h3><p data-i18n="advantages.items.5.desc">Тестуємо нові AI-моделі одразу, як вони виходять, і додаємо в роботу те, що дійсно працює</p></div>
       </div>
     </div>
   </section>
@@ -207,17 +211,17 @@
         <div class="field">
           <label for="name" data-i18n="contact.fieldName">Ім'я</label>
           <input type="text" id="name" name="name">
-          <span class="field-error" data-error-for="name" aria-live="polite"></span>
+          <span class="field-error" id="name-error" data-error-for="name" aria-live="polite"></span>
         </div>
         <div class="field">
           <label for="contact-value" data-i18n="contact.fieldContact">Email або телефон</label>
           <input type="text" id="contact-value" name="contact">
-          <span class="field-error" data-error-for="contact" aria-live="polite"></span>
+          <span class="field-error" id="contact-error" data-error-for="contact" aria-live="polite"></span>
         </div>
         <div class="field">
           <label for="message" data-i18n="contact.fieldMessage">Повідомлення</label>
           <textarea id="message" name="message" rows="4"></textarea>
-          <span class="field-error" data-error-for="message" aria-live="polite"></span>
+          <span class="field-error" id="message-error" data-error-for="message" aria-live="polite"></span>
         </div>
         <fieldset class="interest-fieldset">
           <legend data-i18n="contact.fieldInterest">Що вас цікавить?</legend>
@@ -238,7 +242,7 @@
 <footer class="site-footer">
   <div class="container">
     <span class="logo"><img src="favicon.svg" class="logo-mark" alt="" width="22" height="22">Nova AI</span>
-    <p data-i18n="footer.tagline">Творимо майбутнє за допомогою штучного інтелекту</p>
+    <p data-i18n="footer.tagline">Ідея → AI → результат</p>
     <p class="copyright" data-i18n="footer.copyright">© 2026 Nova AI. Усі права захищено.</p>
   </div>
 </footer>

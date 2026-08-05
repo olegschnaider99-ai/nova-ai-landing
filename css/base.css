@@ -124,3 +124,10 @@ a { color: inherit; text-decoration: none; }
 }
 
 button { font-family: inherit; }
+
+/* Every link/button gets a visible keyboard-focus ring by default —
+   most components only had the browser's unstyled default before. */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 3px;
+}

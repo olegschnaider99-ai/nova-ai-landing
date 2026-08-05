@@ -499,6 +499,7 @@
 .contact .field input:focus,
 .contact .field textarea:focus {
   border-color: var(--paper-accent-text);
+  box-shadow: 0 0 0 2px var(--paper-accent-text);
 }
 
 .contact .field-error {

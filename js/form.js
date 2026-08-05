@@ -31,6 +31,13 @@ function clearFieldErrors(form) {
   form.querySelectorAll('.field-error').forEach((el) => {
     el.textContent = '';
   });
+  ['name', 'contact', 'message'].forEach((field) => {
+    const input = form.elements[field];
+    if (input) {
+      input.removeAttribute('aria-invalid');
+      input.removeAttribute('aria-describedby');
+    }
+  });
 }
 
 function showFieldErrors(form, errors, lang) {
@@ -38,5 +45,11 @@ function showFieldErrors(form, errors, lang) {
     const key = type === 'required' ? 'contact.errorRequired' : 'contact.errorEmail';
     const el = form.querySelector(`[data-error-for="${field}"]`);
     if (el) el.textContent = translate(key, lang);
+
+    const input = form.elements[field];
+    if (input && el) {
+      input.setAttribute('aria-invalid', 'true');
+      input.setAttribute('aria-describedby', el.id);
+    }
   });
 }

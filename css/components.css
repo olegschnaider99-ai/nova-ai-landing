@@ -15,7 +15,7 @@
   padding: 15px 34px;
   border-radius: 999px;
   color: var(--text-primary);
-  background: linear-gradient(180deg, rgba(120, 200, 255, 0.16), rgba(60, 140, 220, 0.08));
+  background: linear-gradient(180deg, rgba(255, 171, 143, 0.16), rgba(255, 107, 74, 0.08));
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 26px rgba(255, 107, 74, 0.35);
   isolation: isolate;
   overflow: hidden;
@@ -248,6 +248,7 @@
    button in the card; stacking two same-shaped pills read as clutter and
    forced them onto separate lines in the narrower grid cards. */
 .service-detail-link {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -258,6 +259,19 @@
   padding-bottom: 1px;
   white-space: nowrap;
   transition: all 0.2s ease;
+}
+
+/* Invisible hit-area expansion — the underlined-text look stays exactly
+   as designed, but the actual clickable/tappable box reaches a real
+   touch-target size (WCAG 2.5.8) via an absolutely-positioned pseudo
+   rather than visible padding. */
+.service-detail-link::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -6px;
+  right: -6px;
 }
 
 .service-detail-link:hover {
@@ -289,8 +303,8 @@
 }
 
 .field input:focus, .field textarea:focus {
-  outline: none;
   border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px var(--accent-blue);
 }
 
 .field-error {
