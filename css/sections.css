@@ -88,7 +88,7 @@
   height: 2px;
   background: var(--text-primary);
   border-radius: 2px;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
@@ -379,7 +379,7 @@
   line-height: 1;
   color: transparent;
   -webkit-text-stroke: 1px var(--accent-blue);
-  opacity: 0.7;
+  opacity: 0.6;
   margin-bottom: 20px;
 }
 
@@ -442,7 +442,7 @@
   font-weight: 700;
   color: transparent;
   -webkit-text-stroke: 1px var(--accent-violet);
-  opacity: 0.55;
+  opacity: 0.6;
 }
 
 .advantage-item h3 {

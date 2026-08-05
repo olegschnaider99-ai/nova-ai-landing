@@ -19,7 +19,7 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 26px rgba(255, 107, 74, 0.35);
   isolation: isolate;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-primary::before {
@@ -383,7 +383,7 @@
   justify-content: center;
   color: var(--text-primary);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
-  transition: transform 0.25s ease;
+  transition: transform 0.2s ease;
 }
 
 /* Static ring, not a spinning gradient — the rotating-border treatment
