@@ -1,11 +1,4 @@
 @media (max-width: 1024px) {
-  .about-inner {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .about h2 {
-    position: static;
-  }
   .services-grid, .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -41,15 +34,11 @@
   }
   .process-timeline {
     grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
   }
   .process-timeline li {
-    border-top: none;
+    padding-left: 24px;
     border-left: 2px solid var(--border-glass);
-    padding-left: 20px;
-  }
-  .step-number {
-    margin-top: 0;
-    margin-left: -33px;
   }
 }
 
@@ -92,6 +81,9 @@
   }
   .main-nav a {
     text-align: center;
+  }
+  .about {
+    padding: 100px 0;
   }
   .services-grid, .portfolio-grid {
     grid-template-columns: 1fr;

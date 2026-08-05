@@ -16,7 +16,7 @@ export const dictionary = {
   'hero.ctaSecondary': { ua: 'Дізнатись більше', en: 'Learn more' },
 
   'about.title': { ua: 'Про нас', en: 'About us' },
-  'about.text': { ua: "Nova AI — команда дизайнерів, копірайтерів і AI-інженерів. Ми беремо ваш бриф і за лічені дні повертаємо готові візуали, відео чи тексти — рівень студії, темп значно швидший.", en: 'Nova AI is a team of designers, copywriters and AI engineers. We take your brief and turn around finished visuals, video or copy in days — studio-level output, at a much faster pace.' },
+  'about.text': { ua: "Nova AI — команда дизайнерів, копірайтерів і AI-інженерів. Бриф сьогодні, готовий результат за кілька днів.", en: 'Nova AI is a team of designers, copywriters and AI engineers. Brief today, finished work in days.' },
 
   'services.title': { ua: 'Послуги', en: 'Services' },
   'services.subtitle': { ua: "Повний цикл AI-креативу для вашого бренду", en: 'A full cycle of AI-powered creative for your brand' },
@@ -76,7 +76,7 @@ export const dictionary = {
   'advantages.items.4.title': { ua: 'Прозорість процесу', en: 'A transparent process' },
   'advantages.items.4.desc': { ua: 'Узгоджуємо кожен крок разом з вами', en: 'We align on every step together with you' },
   'advantages.items.5.title': { ua: 'Сучасні AI-інструменти', en: 'Cutting-edge AI tools' },
-  'advantages.items.5.desc': { ua: 'Тестуємо нові AI-моделі одразу, як вони виходять, і додаємо в роботу те, що дійсно працює', en: 'We test new AI models as soon as they ship and put what actually works into production' },
+  'advantages.items.5.desc': { ua: 'Тестуємо нові AI-моделі одразу, як вони виходять', en: 'We test new AI models the moment they ship' },
 
   'contact.title': { ua: 'Залишити заявку', en: 'Get in touch' },
   'contact.subtitle': { ua: 'Розкажіть про свою ідею — ми зв\'яжемось найближчим часом', en: "Tell us about your idea — we'll be in touch shortly" },
