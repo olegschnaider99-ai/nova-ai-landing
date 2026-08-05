@@ -59,8 +59,9 @@
   }
   /* Same nav element, same link styling as desktop — reflowed into a
      collapsible panel instead of removed outright. Toggled via the
-     .is-open class from js/nav.js; closed state stays in the layout
-     (max-height: 0) so it can transition open instead of popping in. */
+     .is-open class from js/nav.js. Collapses via transform+opacity
+     only (no max-height/height) so the reveal never triggers layout,
+     just compositing. */
   .main-nav {
     position: absolute;
     top: 100%;
@@ -76,15 +77,15 @@
     border: 1px solid var(--border-glass);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    max-height: 0;
-    overflow: hidden;
+    transform-origin: top;
+    transform: scaleY(0);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: max-height 0.3s ease, opacity 0.25s ease, visibility 0.3s;
+    transition: transform 0.3s ease, opacity 0.25s ease, visibility 0.3s;
   }
   .main-nav.is-open {
-    max-height: 320px;
+    transform: scaleY(1);
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
