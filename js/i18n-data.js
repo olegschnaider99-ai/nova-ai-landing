@@ -97,6 +97,8 @@ export const dictionary = {
   'serviceDetail.includedTitle': { ua: 'Що входить', en: "What's included" },
   'serviceDetail.toolsTitle': { ua: 'Інструменти та технології', en: 'Tools & technologies' },
   'serviceDetail.processTitle': { ua: 'Як ми працюємо', en: 'How we work' },
+  'serviceDetail.examplesTitle': { ua: 'Приклади робіт', en: 'Selected work' },
+  'serviceDetail.relatedTitle': { ua: 'Дивіться також', en: 'See also' },
   'serviceDetail.ctaText': { ua: 'Готові почати?', en: 'Ready to start?' },
 
   'service.visuals.title': { ua: 'AI-генерація візуалів та брендинг', en: 'AI Visuals & Branding' },
