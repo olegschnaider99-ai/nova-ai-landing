@@ -31,12 +31,17 @@
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo"><img src="favicon.svg" class="logo-mark" alt="" width="22" height="22">Nova AI</a>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-nav">
       <a href="index.html#services" data-i18n="nav.services">Послуги</a>
       <a href="index.html#portfolio" data-i18n="nav.portfolio">Роботи</a>
       <a href="index.html#process" data-i18n="nav.process">Процес</a>
       <a href="index.html#contact" data-i18n="nav.contact">Контакти</a>
     </nav>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-i18n-aria="nav.menuToggle" aria-label="Меню">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
     <button class="lang-toggle" data-lang-toggle type="button">EN</button>
   </div>
 </header>
@@ -71,8 +76,8 @@
 
       <h2 data-i18n="serviceDetail.examplesTitle">Приклади робіт</h2>
       <div class="service-detail-gallery">
-        <a href="index.html#portfolio" class="service-detail-gallery-item"><img src="images/portfolio/portfolio-1.jpg" alt="" loading="lazy"></a>
-        <a href="index.html#portfolio" class="service-detail-gallery-item"><img src="images/portfolio/portfolio-6.jpg" alt="" loading="lazy"></a>
+        <a href="index.html#portfolio" class="service-detail-gallery-item"><img src="images/portfolio/portfolio-1.jpg" data-i18n-alt="portfolio.items.1" alt="AI-візуал · Абстрактна композиція" loading="lazy"></a>
+        <a href="index.html#portfolio" class="service-detail-gallery-item"><img src="images/portfolio/portfolio-6.jpg" data-i18n-alt="portfolio.items.6" alt="AI-візуал · Архітектурна форма" loading="lazy"></a>
       </div>
 
       <h2 data-i18n="serviceDetail.processTitle">Як ми працюємо</h2>

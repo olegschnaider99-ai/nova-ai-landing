@@ -4,6 +4,7 @@ import { translate } from './i18n-data.js';
 export function initContactForm(getCurrentLang) {
   const form = document.getElementById('contact-form');
   const successEl = document.getElementById('contact-success');
+  if (!form || !successEl) return;
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();

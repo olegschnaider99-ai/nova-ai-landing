@@ -6,6 +6,7 @@ export const dictionary = {
   'nav.portfolio': { ua: 'Роботи', en: 'Work' },
   'nav.process': { ua: 'Процес', en: 'Process' },
   'nav.contact': { ua: 'Контакти', en: 'Contact' },
+  'nav.menuToggle': { ua: 'Меню', en: 'Menu' },
 
   'hero.eyebrow': { ua: 'AI-креатор агентство', en: 'AI-Creator Agency' },
   'hero.title': { ua: 'Твоя ідея заслуговує вибухового старту', en: 'Your idea deserves an explosive start' },

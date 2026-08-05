@@ -41,6 +41,9 @@ export function applyLanguage(lang) {
   document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
     el.setAttribute('aria-label', translate(el.dataset.i18nAria, lang));
   });
+  document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+    el.setAttribute('alt', translate(el.dataset.i18nAlt, lang));
+  });
   document.querySelectorAll('[data-lang-toggle]').forEach((btn) => {
     btn.textContent = lang === 'ua' ? 'EN' : 'UA';
   });

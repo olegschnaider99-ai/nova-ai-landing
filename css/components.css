@@ -57,6 +57,16 @@
   box-shadow: 0 0 30px rgba(255, 171, 143, 0.55), 0 10px 28px rgba(0, 0, 0, 0.4);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary::before,
+  .btn-primary::after {
+    animation: none;
+  }
+  .btn-primary {
+    transition: none;
+  }
+}
+
 .btn-secondary {
   padding: 14px 30px;
   border-radius: 999px;
