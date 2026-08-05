@@ -149,21 +149,16 @@
   gap: 10px;
 }
 
+/* Static credit line (tool names), not a control — no hover, no glow.
+   A non-interactive label that lit up like a button on hover was a
+   false affordance (implies clickability that isn't there). */
 .tool-chip {
   padding: 8px 16px;
   border-radius: 999px;
   background: var(--glass-bg);
-  border: 1px solid rgba(255, 171, 143, 0.35);
-  box-shadow: 0 0 10px rgba(255, 171, 143, 0.12);
+  border: 1px solid var(--border-glass);
   font-size: 13px;
   color: var(--text-secondary);
-  transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.tool-chip:hover {
-  border-color: var(--accent-blue);
-  color: var(--text-primary);
-  box-shadow: 0 0 16px rgba(255, 171, 143, 0.35);
 }
 
 .service-detail-gallery {
