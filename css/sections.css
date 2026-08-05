@@ -44,23 +44,24 @@
   font-size: 13px;
 }
 
+/* Quiet by default — the page is the hero, not the nav. Pill
+   background/glow only appears on hover/focus, not sitting lit at
+   rest on every load. */
 .main-nav a {
   padding: 9px 18px;
   border-radius: 999px;
   color: var(--text-secondary);
-  background: var(--glass-bg);
-  border: 1px solid var(--border-glass);
-  box-shadow: 0 0 10px rgba(255, 107, 74, 0.12);
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
+  background: transparent;
+  border: 1px solid transparent;
   transition: all 0.2s ease;
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav a:focus-visible {
   color: var(--text-primary);
-  border-color: var(--accent-violet);
-  background: rgba(255, 107, 74, 0.14);
-  box-shadow: 0 0 16px rgba(255, 107, 74, 0.4);
+  border-color: var(--border-glass);
+  background: var(--glass-bg);
+  box-shadow: 0 0 16px rgba(255, 107, 74, 0.3);
 }
 
 /* Mobile menu toggle — hidden by default, shown only below the
@@ -182,9 +183,12 @@
 }
 
 .hero-description {
+  max-width: 58ch;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--text-secondary);
   text-shadow: 0 2px 12px rgba(3, 1, 6, 0.8);
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .hero-actions {
@@ -389,8 +393,10 @@
   color: var(--text-secondary);
 }
 
+/* Reads as quiet confirmation, not another pitch — more room than its
+   neighbors, nothing rushed. */
 .advantages {
-  padding: 100px 0;
+  padding: 130px 0;
 }
 
 .advantages h2 {
@@ -549,7 +555,7 @@
 }
 
 .site-footer {
-  padding: 48px 0;
+  padding: 72px 0;
   text-align: center;
   border-top: 1px solid var(--border-glass);
   color: var(--text-muted);
