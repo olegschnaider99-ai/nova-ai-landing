@@ -165,6 +165,14 @@
   .services-grid .service-card:nth-child(6) .service-icon {
     margin-bottom: 12px;
   }
+  /* Desktop's fixed 140x90 thumbnail was sized to sit inline in a
+     row; stacked in a column it should behave like every other
+     card's full-width preview instead of staying pinned small. */
+  .services-grid .service-card:nth-child(6) .service-card-preview {
+    width: 100%;
+    height: 160px;
+    margin-top: 16px;
+  }
   .hero h1 {
     font-size: 32px;
   }

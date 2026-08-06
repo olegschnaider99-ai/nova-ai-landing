@@ -71,7 +71,7 @@ function runParticleAnimation(canvas, overlay) {
     };
   });
 
-  const duration = 2500;
+  const duration = 2900;
   const startTime = performance.now();
 
   function easeOutCubic(t) {
@@ -142,7 +142,7 @@ function runParticleAnimation(canvas, overlay) {
 function revealLogo(overlay) {
   const logo = overlay.querySelector('.intro-logo');
   logo.classList.add('is-visible');
-  setTimeout(() => finishIntro(overlay), 900);
+  setTimeout(() => finishIntro(overlay), 1500);
 }
 
 function finishIntro(overlay) {

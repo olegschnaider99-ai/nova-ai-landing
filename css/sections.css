@@ -302,6 +302,18 @@
   gap: 24px;
 }
 
+/* Every other card ends in a photo, so this one going text-only was
+   the one spot the section repeated its own icon+copy template with
+   nothing to look at. Sized as a fixed thumbnail (not the stretched
+   .service-card-preview default) since it sits inline in a row, not
+   stacked below the text like the other five. */
+.services-grid .service-card:nth-child(6) .service-card-preview {
+  flex-shrink: 0;
+  width: 140px;
+  height: 90px;
+  margin-top: 0;
+}
+
 .services-grid .service-card:nth-child(6) .service-icon {
   margin-bottom: 0;
   flex-shrink: 0;

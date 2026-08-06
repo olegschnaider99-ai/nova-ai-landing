@@ -21,6 +21,27 @@
 
 .intro-logo {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 2vw, 16px);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.intro-logo.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.intro-logo-mark {
+  display: block;
+  width: clamp(32px, 7vw, 52px);
+  height: clamp(32px, 7vw, 52px);
+  filter: drop-shadow(0 0 20px rgba(255, 107, 74, 0.55));
+}
+
+.intro-logo-text {
   font-family: var(--font-heading);
   font-size: clamp(28px, 6vw, 48px);
   font-weight: 700;
@@ -30,15 +51,7 @@
   background-clip: text;
   color: transparent;
   filter: drop-shadow(0 0 28px rgba(255, 107, 74, 0.6)) drop-shadow(0 0 50px rgba(255, 171, 143, 0.4));
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
   animation: aurora-shift 6s ease-in-out infinite;
-}
-
-.intro-logo.is-visible {
-  opacity: 1;
-  transform: scale(1);
 }
 
 @keyframes aurora-shift {
