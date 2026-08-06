@@ -1,4 +1,13 @@
 @media (max-width: 1024px) {
+  /* Tablet-portrait viewports (e.g. 1024x1366) are much taller than
+     wide, so 100vh stretched Hero into a mostly-empty box — content
+     centered in the middle of ~450px of dead space above and below.
+     Capping the height keeps Hero full-bleed on landscape/laptop
+     tablets (where 100vh is already reasonable) without ballooning on
+     portrait ones. */
+  .hero {
+    min-height: min(100vh, 760px);
+  }
   .services-grid, .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -82,8 +91,32 @@
   .main-nav a {
     text-align: center;
   }
+  /* Desktop's spacing rhythm (About most spacious, Poster next, then
+     Process/Advantages, Portfolio/Services as the baseline) carried
+     its exact pixel values down to mobile unchanged -- proportionally
+     that reads as far MORE dead space on a small screen than it did
+     on desktop, where it was calibrated against a much bigger canvas.
+     Scaled down while keeping the same relative order intact. */
   .about {
     padding: 100px 0;
+  }
+  .portfolio {
+    padding: 80px 0;
+  }
+  .process {
+    padding: 90px 0;
+  }
+  .advantages {
+    padding: 90px 0;
+  }
+  .poster {
+    padding: 100px 0;
+  }
+  .contact {
+    padding: 90px 0 70px;
+  }
+  .site-footer {
+    padding: 48px 0;
   }
   .services-grid, .portfolio-grid {
     grid-template-columns: 1fr;
