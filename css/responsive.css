@@ -52,8 +52,31 @@
 }
 
 @media (max-width: 768px) {
+  /* .main-nav goes position:absolute below (out of flow), leaving
+     .header-inner's justify-content:space-between to split the
+     remaining two boxes (toggle, lang switch) apart -- the toggle
+     landed stranded near the middle of the header instead of sitting
+     with either the logo or the language switch. An auto margin
+     eats the freed space and pins both to the right edge together,
+     the conventional spot for a mobile header's controls. */
   .nav-toggle {
     display: flex;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+  }
+  .lang-toggle {
+    margin-left: 10px;
+    padding: 13px 14px;
+  }
+  /* "Обрати послугу" (repeated on 6 cards) and the Contact page's
+     interest chips are the most-tapped controls on mobile; both sat
+     a few px under the 44px touch-target guideline. */
+  .btn-chip {
+    padding: 13px 20px;
+  }
+  .interest-fieldset label {
+    padding: 13px 18px;
   }
   /* Same nav element, same link styling as desktop — reflowed into a
      collapsible panel instead of removed outright. Toggled via the
