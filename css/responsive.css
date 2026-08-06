@@ -128,6 +128,19 @@
     grid-column: span 1;
     grid-row: span 1;
   }
+  /* nth-child(6)'s desktop row layout (icon + title + text + actions
+     side by side) has no wrap, so at phone widths .service-card-actions
+     was pushed ~100px past the viewport edge -- its link/button were
+     genuinely cut off on-screen, not just visually tight. Stack it like
+     every other card instead of trying to preserve the row. */
+  .services-grid .service-card:nth-child(6) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .services-grid .service-card:nth-child(6) .service-icon {
+    margin-bottom: 12px;
+  }
   .hero h1 {
     font-size: 32px;
   }
