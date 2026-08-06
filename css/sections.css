@@ -158,6 +158,9 @@
   margin: 0 auto;
 }
 
+/* No resting glow — the eyebrow is a quiet label, not a lit-up badge;
+   the spotlight already behind the whole Hero (.hero::before) is the
+   one light source here, this doesn't need its own halo on top. */
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
@@ -171,7 +174,6 @@
   font-weight: 600;
   letter-spacing: 0.3px;
   margin-bottom: 24px;
-  box-shadow: 0 0 20px rgba(255, 107, 74, 0.15);
 }
 
 .hero h1 {

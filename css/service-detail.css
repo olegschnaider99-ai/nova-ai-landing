@@ -43,6 +43,9 @@
   color: var(--accent-blue);
 }
 
+/* No halo of its own — the page-level spotlight (.service-detail::before)
+   already lights this area; a second glow directly on the icon was two
+   layers of the same idea stacked on top of each other. */
 .service-detail-icon {
   width: 56px;
   height: 56px;
@@ -53,7 +56,6 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  box-shadow: 0 0 24px rgba(255, 107, 74, 0.25);
 }
 
 .service-detail-icon svg {
