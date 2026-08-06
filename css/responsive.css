@@ -113,6 +113,7 @@
   }
   .main-nav a {
     text-align: center;
+    padding: 12px 18px;
   }
   /* Desktop's spacing rhythm (About most spacious, Poster next, then
      Process/Advantages, Portfolio/Services as the baseline) carried
