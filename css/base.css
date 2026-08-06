@@ -2,6 +2,15 @@
 
 html { scroll-behavior: smooth; }
 
+/* Text selection defaults to the browser's system color (usually
+   blue) which clashes with the palette on every page — a detail
+   nobody consciously notices until it's the one wrong-colored thing
+   on the screen. */
+::selection {
+  background: var(--accent-violet);
+  color: var(--bg-deep);
+}
+
 /* Scroll-reveal: the camera discovers content, it doesn't pop in —
    opacity + a small rise, applied per direct child so a group (a grid
    of cards, a list of steps) arrives with a musical cadence instead

@@ -45,6 +45,10 @@
   box-shadow: 0 0 30px rgba(255, 171, 143, 0.55), 0 10px 28px rgba(0, 0, 0, 0.4);
 }
 
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .btn-primary {
     transition: none;
@@ -68,6 +72,10 @@
   transform: translateY(-1px);
 }
 
+.btn-secondary:active {
+  transform: translateY(0) scale(0.98);
+}
+
 .btn-chip {
   padding: 9px 20px;
   border-radius: 999px;
@@ -78,13 +86,17 @@
   border: 1px solid rgba(255, 171, 143, 0.35);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
-  transition: background-color 0.2s var(--ease-out), border-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+  transition: background-color 0.2s var(--ease-out), border-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out), transform 0.2s var(--ease-out);
 }
 
 .btn-chip:hover {
   background: rgba(255, 171, 143, 0.18);
   border-color: var(--accent-blue);
   box-shadow: 0 0 16px rgba(255, 171, 143, 0.45);
+}
+
+.btn-chip:active {
+  transform: scale(0.97);
 }
 
 /* Cards */
@@ -396,6 +408,10 @@
 .floating-cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.55), 0 0 20px rgba(255, 171, 143, 0.35);
+}
+
+.floating-cta:active {
+  transform: translateY(0) scale(0.96);
 }
 
 @media (prefers-reduced-motion: reduce) {
