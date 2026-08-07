@@ -84,6 +84,7 @@ export const dictionary = {
   'contact.fieldContact': { ua: 'Email або телефон', en: 'Email or phone' },
   'contact.fieldMessage': { ua: 'Повідомлення', en: 'Message' },
   'contact.fieldInterest': { ua: 'Що вас цікавить?', en: 'What are you interested in?' },
+  'contact.interestUnsure': { ua: 'Ще не знаю, підкажіть', en: "Not sure yet, let's talk" },
   'contact.submit': { ua: 'Відправити заявку', en: 'Send request' },
   'contact.successMessage': { ua: 'Дякуємо! Ми зв\'яжемось з вами найближчим часом.', en: "Thank you! We'll be in touch with you shortly." },
   'contact.errorRequired': { ua: "Заповніть це поле", en: 'Please fill in this field' },

@@ -542,6 +542,17 @@
   box-shadow: 0 0 0 2px var(--paper-accent-text);
 }
 
+.contact .field input[aria-invalid="true"],
+.contact .field textarea[aria-invalid="true"] {
+  border-color: var(--paper-accent-text);
+}
+
+.contact .field input[aria-invalid="true"]:focus,
+.contact .field textarea[aria-invalid="true"]:focus {
+  border-color: var(--paper-accent-text);
+  box-shadow: 0 0 0 2px var(--paper-accent-text);
+}
+
 .contact .field-error {
   color: var(--paper-accent-text);
 }

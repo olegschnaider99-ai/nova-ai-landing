@@ -156,6 +156,25 @@
 .services-grid .service-card:nth-child(5):hover { border-color: var(--accent-blue-2); }
 .services-grid .service-card:nth-child(6):hover { border-color: var(--accent-pink); }
 
+/* Every card's icon used the identical rounded-square tile in the
+   identical tint -- an "icon tile + heading" template repeated six
+   times, flagged independently by a design review and an automated
+   detector. Reuses the per-card hover color already assigned above
+   (no new colors) and alternates the tile shape so six cards read as
+   six cards, not one component instanced six times. */
+.services-grid .service-card:nth-child(1) .service-icon { background: rgba(255, 107, 74, 0.12); border-color: rgba(255, 107, 74, 0.3); }
+.services-grid .service-card:nth-child(1) .service-icon svg { color: var(--accent-violet); }
+.services-grid .service-card:nth-child(2) .service-icon { background: rgba(255, 171, 143, 0.12); border-color: rgba(255, 171, 143, 0.3); border-radius: 50%; }
+.services-grid .service-card:nth-child(2) .service-icon svg { color: var(--accent-blue); }
+.services-grid .service-card:nth-child(3) .service-icon { background: rgba(224, 80, 58, 0.12); border-color: rgba(224, 80, 58, 0.3); }
+.services-grid .service-card:nth-child(3) .service-icon svg { color: var(--accent-pink); }
+.services-grid .service-card:nth-child(4) .service-icon { background: rgba(255, 207, 192, 0.12); border-color: rgba(255, 207, 192, 0.3); border-radius: 50%; }
+.services-grid .service-card:nth-child(4) .service-icon svg { color: var(--accent-teal); }
+.services-grid .service-card:nth-child(5) .service-icon { background: rgba(194, 63, 40, 0.12); border-color: rgba(194, 63, 40, 0.3); }
+.services-grid .service-card:nth-child(5) .service-icon svg { color: var(--accent-blue-2); }
+.services-grid .service-card:nth-child(6) .service-icon { background: rgba(224, 80, 58, 0.12); border-color: rgba(224, 80, 58, 0.3); border-radius: 50%; }
+.services-grid .service-card:nth-child(6) .service-icon svg { color: var(--accent-pink); }
+
 @media (prefers-reduced-motion: reduce) {
   .service-card, .service-card::before { transition: none; }
 }
@@ -305,6 +324,18 @@
 .field input:focus, .field textarea:focus {
   border-color: var(--accent-blue);
   box-shadow: 0 0 0 2px var(--accent-blue);
+}
+
+/* js/form.js already sets aria-invalid on failed validation, but
+   nothing rendered it -- the only signal was the small error text
+   below the field, easy to miss on a quick re-scan after submit. */
+.field input[aria-invalid="true"], .field textarea[aria-invalid="true"] {
+  border-color: #ff8fa3;
+}
+
+.field input[aria-invalid="true"]:focus, .field textarea[aria-invalid="true"]:focus {
+  border-color: #ff8fa3;
+  box-shadow: 0 0 0 2px #ff8fa3;
 }
 
 .field-error {
