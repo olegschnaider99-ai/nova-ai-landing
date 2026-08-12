@@ -445,8 +445,31 @@
   transform: translateY(0) scale(0.96);
 }
 
+/* On pages with a hero (index.html), the hero already carries a loud
+   primary CTA in the first viewport -- showing this one at the same
+   time was a second identical ask before the first had a chance to
+   land. js/nav.js's existing hero-visibility observer adds
+   .is-visible once the hero scrolls out of view. Pages with no
+   #hero (service-detail pages) never match this selector, so they
+   keep the floating CTA visible from load, unaffected. */
+body:has(#hero) .floating-cta {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--dur-medium) var(--ease-out), visibility var(--dur-medium), box-shadow 0.2s var(--ease-out);
+}
+
+body:has(#hero) .floating-cta.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .floating-cta::before { animation: none; }
+  body:has(#hero) .floating-cta {
+    transition: box-shadow 0.2s var(--ease-out);
+  }
 }
 
 /* Portfolio + service-detail gallery photos previously either sat

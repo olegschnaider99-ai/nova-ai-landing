@@ -100,6 +100,7 @@ export const dictionary = {
   'contact.subtitle': { ua: 'Розкажіть про свою ідею — ми зв\'яжемось найближчим часом', en: "Tell us about your idea — we'll be in touch shortly" },
   'contact.fieldName': { ua: "Ім'я", en: 'Name' },
   'contact.fieldContact': { ua: 'Email або телефон', en: 'Email or phone' },
+  'contact.fieldContactPlaceholder': { ua: "you@email.com або +380 XX XXX XX XX", en: 'you@email.com or +1 234 567 8900' },
   'contact.fieldMessage': { ua: 'Повідомлення', en: 'Message' },
   'contact.fieldInterest': { ua: 'Що вас цікавить?', en: 'What are you interested in?' },
   'contact.interestUnsure': { ua: 'Ще не знаю, підкажіть', en: "Not sure yet, let's talk" },
