@@ -663,28 +663,36 @@
   color: var(--paper-text-secondary);
 }
 
+/* Tactile-card treatment: a visible warm border plus a shallow inset
+   shadow, so each field reads as cut into the paper rather than
+   floating on it -- the resting border used to be almost invisible
+   (paper-border at 0.22 alpha). Focus adds a full-strength ring on
+   top of the same inset shadow instead of replacing it. */
 .contact .field input,
 .contact .field textarea {
-  background: rgba(255, 255, 255, 0.55);
-  border-color: var(--paper-border);
+  background: rgba(255, 255, 255, 0.6);
+  border-color: rgba(116, 36, 25, 0.5);
+  border-radius: 10px;
   color: var(--paper-text);
+  box-shadow: inset 0 1px 3px rgba(36, 26, 18, 0.18);
 }
 
 .contact .field input:focus,
 .contact .field textarea:focus {
   border-color: var(--paper-accent-text);
-  box-shadow: 0 0 0 2px var(--paper-accent-text);
+  box-shadow: inset 0 1px 3px rgba(36, 26, 18, 0.18), 0 0 0 2px var(--paper-accent-text);
 }
 
 .contact .field input[aria-invalid="true"],
 .contact .field textarea[aria-invalid="true"] {
   border-color: var(--paper-accent-text);
+  box-shadow: inset 0 1px 3px rgba(36, 26, 18, 0.18);
 }
 
 .contact .field input[aria-invalid="true"]:focus,
 .contact .field textarea[aria-invalid="true"]:focus {
   border-color: var(--paper-accent-text);
-  box-shadow: 0 0 0 2px var(--paper-accent-text);
+  box-shadow: inset 0 1px 3px rgba(36, 26, 18, 0.18), 0 0 0 2px var(--paper-accent-text);
 }
 
 .contact .field-error {
@@ -695,9 +703,14 @@
   color: var(--paper-text-secondary);
 }
 
+/* Chips stay a solid bordered pill (not the underline treatment used
+   on the fields) -- they're toggle controls, not text, and losing
+   the box shape would blur the "this is selectable" signal the
+   toggle-chip pattern was built around earlier. Border strengthened
+   the same way as the fields, just proportionally lighter. */
 .contact .interest-fieldset label {
   background: rgba(255, 255, 255, 0.35);
-  border-color: var(--paper-border);
+  border-color: rgba(116, 36, 25, 0.4);
   color: var(--paper-text-secondary);
 }
 
