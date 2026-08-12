@@ -467,6 +467,16 @@
   transition: opacity var(--dur-medium) var(--ease-out);
 }
 
+/* Author CSS always wins over the browser's built-in [hidden]
+   stylesheet rule, specificity aside -- an unconditional
+   `display: flex` above meant this fixed, full-viewport, z-index:300
+   overlay was ALWAYS rendered and capturing every click on the whole
+   site, just invisible at opacity:0. This restores the native
+   hidden behavior so it only exists in the layout while open. */
+.lightbox[hidden] {
+  display: none;
+}
+
 .lightbox.is-open {
   opacity: 1;
 }
