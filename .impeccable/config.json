@@ -1,0 +1,72 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-08-12T16:25:19.220Z"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "ai-visuals.html"
+        ],
+        "createdAt": "2026-08-12T16:25:25.441Z"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "ai-video.html"
+        ],
+        "createdAt": "2026-08-12T16:25:25.556Z"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "ai-social.html"
+        ],
+        "createdAt": "2026-08-12T16:25:25.664Z"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "ai-automation.html"
+        ],
+        "createdAt": "2026-08-12T16:25:25.772Z"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "ai-copywriting.html"
+        ],
+        "createdAt": "2026-08-12T16:25:25.881Z"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "ai-consulting.html"
+        ],
+        "createdAt": "2026-08-12T16:25:25.990Z"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "css/sections.css"
+        ],
+        "createdAt": "2026-08-12T16:25:26.098Z"
+      }
+    ]
+  }
+}
