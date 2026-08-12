@@ -41,6 +41,7 @@
       <a href="#services" data-i18n="nav.services">Послуги</a>
       <a href="#portfolio" data-i18n="nav.portfolio">Роботи</a>
       <a href="#process" data-i18n="nav.process">Процес</a>
+      <a href="#faq" data-i18n="nav.faq">Питання</a>
       <a href="#contact" data-i18n="nav.contact">Контакти</a>
     </nav>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-i18n-aria="nav.menuToggle" aria-label="Меню">
@@ -70,6 +71,7 @@
     <div class="container about-inner reveal">
       <h2 class="about-label" data-i18n="about.title">Про нас</h2>
       <p data-i18n="about.text">Nova AI — команда дизайнерів, копірайтерів і AI-інженерів. Бриф сьогодні, готовий результат за кілька днів.</p>
+      <p class="about-secondary" data-i18n="about.textSecondary">AI без чіткого завдання видає красиву порожнечу — тому ми починаємо не з генерації, а з брифу: що продаєте, кому і чим відрізняєтесь. Це третина процесу нижче — і саме вона визначає, чи вийде матеріал під ваш бренд, а не випадкова картинка.</p>
     </div>
   </section>
 
@@ -160,12 +162,12 @@
       <h2 data-i18n="portfolio.title">Приклади робіт</h2>
       <p class="section-subtitle" data-i18n="portfolio.subtitle">Візуали, відео та контент, створені за допомогою AI</p>
       <div class="portfolio-grid reveal">
-        <figure class="portfolio-card portfolio-card--1"><img src="images/portfolio/portfolio-1.jpg" alt="" loading="lazy"><figcaption data-i18n="portfolio.items.1">AI-візуал · Абстрактна композиція</figcaption></figure>
-        <figure class="portfolio-card portfolio-card--2"><img src="images/portfolio/portfolio-2.jpg" alt="" loading="lazy"><figcaption data-i18n="portfolio.items.2">AI-візуал · Продуктова сцена</figcaption></figure>
-        <figure class="portfolio-card portfolio-card--3"><img src="images/portfolio/portfolio-3.jpg" alt="" loading="lazy"><figcaption data-i18n="portfolio.items.3">AI-моушн · Цикл переходів</figcaption></figure>
-        <figure class="portfolio-card portfolio-card--4"><img src="images/portfolio/portfolio-4.jpg" alt="" loading="lazy"><figcaption data-i18n="portfolio.items.4">AI-візуал · Портретне світло</figcaption></figure>
-        <figure class="portfolio-card portfolio-card--5"><img src="images/portfolio/portfolio-5.jpg" alt="" loading="lazy"><figcaption data-i18n="portfolio.items.5">AI-контент · Соціальний пост</figcaption></figure>
-        <figure class="portfolio-card portfolio-card--6"><img src="images/portfolio/portfolio-6.jpg" alt="" loading="lazy"><figcaption data-i18n="portfolio.items.6">AI-візуал · Архітектурна форма</figcaption></figure>
+        <figure class="portfolio-card portfolio-card--1"><button class="portfolio-card-trigger" type="button" data-i18n-aria="portfolio.viewAria" aria-label="Переглянути повністю" aria-describedby="portfolio-cap-1"><img src="images/portfolio/portfolio-1.jpg" alt="" loading="lazy"></button><figcaption id="portfolio-cap-1" data-i18n="portfolio.items.1">AI-візуал · Абстрактна композиція</figcaption></figure>
+        <figure class="portfolio-card portfolio-card--2"><button class="portfolio-card-trigger" type="button" data-i18n-aria="portfolio.viewAria" aria-label="Переглянути повністю" aria-describedby="portfolio-cap-2"><img src="images/portfolio/portfolio-2.jpg" alt="" loading="lazy"></button><figcaption id="portfolio-cap-2" data-i18n="portfolio.items.2">AI-візуал · Продуктова сцена</figcaption></figure>
+        <figure class="portfolio-card portfolio-card--3"><button class="portfolio-card-trigger" type="button" data-i18n-aria="portfolio.viewAria" aria-label="Переглянути повністю" aria-describedby="portfolio-cap-3"><img src="images/portfolio/portfolio-3.jpg" alt="" loading="lazy"></button><figcaption id="portfolio-cap-3" data-i18n="portfolio.items.3">AI-моушн · Цикл переходів</figcaption></figure>
+        <figure class="portfolio-card portfolio-card--4"><button class="portfolio-card-trigger" type="button" data-i18n-aria="portfolio.viewAria" aria-label="Переглянути повністю" aria-describedby="portfolio-cap-4"><img src="images/portfolio/portfolio-4.jpg" alt="" loading="lazy"></button><figcaption id="portfolio-cap-4" data-i18n="portfolio.items.4">AI-візуал · Портретне світло</figcaption></figure>
+        <figure class="portfolio-card portfolio-card--5"><button class="portfolio-card-trigger" type="button" data-i18n-aria="portfolio.viewAria" aria-label="Переглянути повністю" aria-describedby="portfolio-cap-5"><img src="images/portfolio/portfolio-5.jpg" alt="" loading="lazy"></button><figcaption id="portfolio-cap-5" data-i18n="portfolio.items.5">AI-контент · Соціальний пост</figcaption></figure>
+        <figure class="portfolio-card portfolio-card--6"><button class="portfolio-card-trigger" type="button" data-i18n-aria="portfolio.viewAria" aria-label="Переглянути повністю" aria-describedby="portfolio-cap-6"><img src="images/portfolio/portfolio-6.jpg" alt="" loading="lazy"></button><figcaption id="portfolio-cap-6" data-i18n="portfolio.items.6">AI-візуал · Архітектурна форма</figcaption></figure>
       </div>
     </div>
   </section>
@@ -206,11 +208,48 @@
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="faq" class="faq">
     <div class="container">
-      <h2 data-i18n="contact.title">Залишити заявку</h2>
-      <p class="section-subtitle" data-i18n="contact.subtitle">Розкажіть про свою ідею — ми зв'яжемось найближчим часом</p>
+      <h2 data-i18n="faq.title">Питання</h2>
+      <p class="section-subtitle" data-i18n="faq.subtitle">Коротко про головне</p>
+      <div class="faq-list reveal">
+        <details class="faq-item">
+          <summary data-i18n="faq.items.1.q">Чим AI-контент відрізняється від традиційного?</summary>
+          <p data-i18n="faq.items.1.a">Результатом — нічим: це готові матеріали під ваше завдання. Різниця у швидкості: перший варіант бачите за кілька днів, а не тижні.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.items.2.q">Чи можна замовити лише одну послугу?</summary>
+          <p data-i18n="faq.items.2.a">Так. Оберіть один напрям із шести — решту можна підключити пізніше, коли буде потрібно.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.items.3.q">Скільки триває робота над проєктом?</summary>
+          <p data-i18n="faq.items.3.a">Залежить від обсягу, тому конкретний термін називаємо після заявки та брифінгу — це перший крок нашого процесу.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.items.4.q">Кому належать готові матеріали?</summary>
+          <p data-i18n="faq.items.4.a">Вам. Використовуйте в рекламі, на сайті та в соцмережах без обмежень.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.items.5.q">Що якщо результат не сподобається?</summary>
+          <p data-i18n="faq.items.5.a">Для цього є окремий етап — узгодження та доопрацювання. Враховуємо правки, доки не буде саме те, що треба.</p>
+        </details>
+      </div>
+    </div>
+  </section>
 
+  <section id="contact" class="contact">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <h2 data-i18n="contact.title">Залишити заявку</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">Розкажіть про свою ідею — ми зв'яжемось найближчим часом</p>
+        <ul class="contact-recap">
+          <li><h3 data-i18n="advantages.items.1.title">Швидкість завдяки AI</h3><p data-i18n="advantages.items.1.desc">Перший варіант бачите вже за кілька днів, а не тижні</p></li>
+          <li><h3 data-i18n="advantages.items.2.title">Індивідуальний підхід</h3><p data-i18n="advantages.items.2.desc">Кожен проєкт під ваш бренд, без шаблонів</p></li>
+          <li><h3 data-i18n="advantages.items.4.title">Прозорість процесу</h3><p data-i18n="advantages.items.4.desc">Узгоджуємо кожен крок разом з вами</p></li>
+        </ul>
+      </div>
+
+      <div class="contact-form-wrap reveal">
       <form id="contact-form" method="post" novalidate>
         <div class="field">
           <label for="name" data-i18n="contact.fieldName">Ім'я</label>
@@ -240,6 +279,7 @@
         <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Відправити заявку</button>
       </form>
       <div id="contact-success" class="contact-success" hidden data-i18n="contact.successMessage">Дякуємо! Ми зв'яжемось з вами найближчим часом.</div>
+      </div>
     </div>
   </section>
 </main>
@@ -255,6 +295,16 @@
 <a href="#contact" class="floating-cta" data-i18n-aria="hero.ctaPrimary" aria-label="Залишити заявку">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
 </a>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" hidden>
+  <button class="lightbox-close" id="lightbox-close" type="button" data-i18n-aria="lightbox.close" aria-label="Закрити">
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <figure class="lightbox-media">
+    <img id="lightbox-img" src="" alt="">
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
+</div>
 
 <script>
   /* Fail-safe: if the module script above can't run for any reason

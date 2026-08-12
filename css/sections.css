@@ -239,16 +239,29 @@
   font-weight: 500;
 }
 
+/* Deliberately smaller/quieter than the statement above it -- this is
+   a follow-on explanation, not a second headline. Keeps the section's
+   established restraint (one confident line, then room to breathe)
+   while still saying something concrete about how the work happens. */
+.about .about-secondary {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+  margin-top: 28px;
+  max-width: 56ch;
+}
+
 .services {
   padding: 100px 0;
 }
 
-.services h2, .portfolio h2, .process h2, .advantages h2, .contact h2 {
+.services h2, .portfolio h2, .process h2, .advantages h2, .faq h2, .contact h2 {
   font-size: 32px;
   text-align: center;
 }
 
-.services .section-subtitle, .portfolio .section-subtitle, .process .section-subtitle, .contact .section-subtitle {
+.services .section-subtitle, .portfolio .section-subtitle, .process .section-subtitle, .faq .section-subtitle, .contact .section-subtitle {
   text-align: center;
   margin-bottom: 48px;
 }
@@ -348,16 +361,36 @@
 .portfolio-card--1 { grid-column: span 2; grid-row: span 2; }
 .portfolio-card--4 { grid-row: span 2; }
 
-.portfolio-card img {
+/* Fills the card the same way the old absolutely-positioned <img>
+   did -- now a real button wraps the image so the tile is natively
+   focusable/operable instead of purely decorative. outline-offset is
+   negative so the focus ring draws inside the tile: the card's own
+   overflow:hidden would otherwise clip an outward-facing ring. */
+.portfolio-card-trigger {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: block;
+}
+
+.portfolio-card-trigger:focus-visible {
+  outline-offset: -3px;
+}
+
+.portfolio-card-trigger img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform 0.5s var(--ease-out);
 }
 
-.portfolio-card:hover img {
+.portfolio-card:hover .portfolio-card-trigger img {
   transform: scale(1.03);
 }
 
@@ -504,12 +537,113 @@
   -webkit-text-stroke: 1.5px var(--accent-violet);
 }
 
+.faq {
+  padding: 130px 0;
+}
+
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 20px 24px;
+  background: var(--glass-bg);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 17px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--accent-blue);
+  transition: transform var(--dur-fast) var(--ease-out);
+  flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-item summary::after {
+    transition: none;
+  }
+}
+
 /* Contact is the one section that breaks out of the dark cosmic theme —
    a deliberate light "paper" close, not another glass panel. Everything
    else on the page is glow-on-dark; this is the one hard cut, on purpose. */
 .contact {
   padding: 140px 0 100px;
   background: var(--paper-bg);
+}
+
+/* Two columns instead of one centered form -- the left side recaps
+   why-us in three lines pulled straight from Advantages (no new
+   claims invented) so the ask on the right isn't sitting there
+   alone with no context. */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.contact-info h2,
+.contact-info .section-subtitle {
+  text-align: left;
+}
+
+.contact-info .section-subtitle {
+  margin-bottom: 40px;
+}
+
+.contact-recap {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-recap h3 {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  color: var(--paper-text);
+  margin-bottom: 4px;
+}
+
+.contact-recap p {
+  color: var(--paper-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .contact h2 {

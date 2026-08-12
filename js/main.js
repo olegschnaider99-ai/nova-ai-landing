@@ -6,6 +6,7 @@ import { initContactForm } from './form.js';
 import { initStarfield } from './starfield.js';
 import { initScrollReveal } from './scroll-reveal.js';
 import { initMagneticButtons } from './magnetic.js';
+import { initLightbox } from './lightbox.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initStarfield();
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm(getCurrentLang);
   initScrollReveal();
   initMagneticButtons();
+  initLightbox();
 });

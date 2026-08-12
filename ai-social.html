@@ -41,6 +41,7 @@
       <a href="index.html#services" data-i18n="nav.services">Послуги</a>
       <a href="index.html#portfolio" data-i18n="nav.portfolio">Роботи</a>
       <a href="index.html#process" data-i18n="nav.process">Процес</a>
+      <a href="index.html#faq" data-i18n="nav.faq">Питання</a>
       <a href="index.html#contact" data-i18n="nav.contact">Контакти</a>
     </nav>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-i18n-aria="nav.menuToggle" aria-label="Меню">
@@ -118,6 +119,16 @@
 <a href="index.html?interest=social#contact" class="floating-cta" data-i18n-aria="hero.ctaPrimary" aria-label="Залишити заявку">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
 </a>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" hidden>
+  <button class="lightbox-close" id="lightbox-close" type="button" data-i18n-aria="lightbox.close" aria-label="Закрити">
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <figure class="lightbox-media">
+    <img id="lightbox-img" src="" alt="">
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
+</div>
 
 <script>
   setTimeout(function () {

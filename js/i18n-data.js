@@ -5,6 +5,7 @@ export const dictionary = {
   'nav.services': { ua: 'Послуги', en: 'Services' },
   'nav.portfolio': { ua: 'Роботи', en: 'Work' },
   'nav.process': { ua: 'Процес', en: 'Process' },
+  'nav.faq': { ua: 'Питання', en: 'FAQ' },
   'nav.contact': { ua: 'Контакти', en: 'Contact' },
   'nav.menuToggle': { ua: 'Меню', en: 'Menu' },
 
@@ -17,6 +18,7 @@ export const dictionary = {
 
   'about.title': { ua: 'Про нас', en: 'About us' },
   'about.text': { ua: "Nova AI — команда дизайнерів, копірайтерів і AI-інженерів. Бриф сьогодні, готовий результат за кілька днів.", en: 'Nova AI is a team of designers, copywriters and AI engineers. Brief today, finished work in days.' },
+  'about.textSecondary': { ua: 'AI без чіткого завдання видає красиву порожнечу — тому ми починаємо не з генерації, а з брифу: що продаєте, кому і чим відрізняєтесь. Це третина процесу нижче — і саме вона визначає, чи вийде матеріал під ваш бренд, а не випадкова картинка.', en: 'AI without a clear brief just produces pretty emptiness — so we start with the brief, not the generation: what you sell, to whom, and what sets you apart. That\'s the first step below, and it decides whether you get material built for your brand or a random image.' },
 
   'services.title': { ua: 'Послуги', en: 'Services' },
   'services.subtitle': { ua: "Повний цикл AI-креативу для вашого бренду", en: 'A full cycle of AI-powered creative for your brand' },
@@ -77,6 +79,22 @@ export const dictionary = {
   'advantages.items.4.desc': { ua: 'Узгоджуємо кожен крок разом з вами', en: 'We align on every step together with you' },
   'advantages.items.5.title': { ua: 'Сучасні AI-інструменти', en: 'Cutting-edge AI tools' },
   'advantages.items.5.desc': { ua: 'Тестуємо нові AI-моделі одразу, як вони виходять', en: 'We test new AI models the moment they ship' },
+
+  'faq.title': { ua: 'Питання', en: 'FAQ' },
+  'faq.subtitle': { ua: 'Коротко про головне', en: 'The essentials, briefly' },
+  'faq.items.1.q': { ua: 'Чим AI-контент відрізняється від традиційного?', en: 'How is AI content different from traditional production?' },
+  'faq.items.1.a': { ua: 'Результатом — нічим: це готові матеріали під ваше завдання. Різниця у швидкості: перший варіант бачите за кілька днів, а не тижні.', en: 'Not in the result — it\'s finished material built for your task. The difference is speed: you see a first draft in days, not weeks.' },
+  'faq.items.2.q': { ua: 'Чи можна замовити лише одну послугу?', en: 'Can I order just one service?' },
+  'faq.items.2.a': { ua: 'Так. Оберіть один напрям із шести — решту можна підключити пізніше, коли буде потрібно.', en: 'Yes. Pick one of the six directions — the rest can be added later, whenever you need them.' },
+  'faq.items.3.q': { ua: 'Скільки триває робота над проєктом?', en: 'How long does a project take?' },
+  'faq.items.3.a': { ua: 'Залежить від обсягу, тому конкретний термін називаємо після заявки та брифінгу — це перший крок нашого процесу.', en: 'It depends on scope, so we give a real timeframe only after the request and briefing — the first step of our process.' },
+  'faq.items.4.q': { ua: 'Кому належать готові матеріали?', en: 'Who owns the finished materials?' },
+  'faq.items.4.a': { ua: 'Вам. Використовуйте в рекламі, на сайті та в соцмережах без обмежень.', en: 'You do. Use them in ads, on your site, and across social media without restrictions.' },
+  'faq.items.5.q': { ua: 'Що якщо результат не сподобається?', en: 'What if I don\'t like the result?' },
+  'faq.items.5.a': { ua: 'Для цього є окремий етап — узгодження та доопрацювання. Враховуємо правки, доки не буде саме те, що треба.', en: 'That\'s what the review step is for. We factor in feedback until it\'s exactly right.' },
+
+  'portfolio.viewAria': { ua: 'Переглянути повністю', en: 'View full size' },
+  'lightbox.close': { ua: 'Закрити', en: 'Close' },
 
   'contact.title': { ua: 'Залишити заявку', en: 'Get in touch' },
   'contact.subtitle': { ua: 'Розкажіть про свою ідею — ми зв\'яжемось найближчим часом', en: "Tell us about your idea — we'll be in touch shortly" },

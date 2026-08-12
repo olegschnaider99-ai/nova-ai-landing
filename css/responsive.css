@@ -136,11 +136,28 @@
   .poster {
     padding: 100px 0;
   }
+  .faq {
+    padding: 90px 0;
+  }
   .contact {
     padding: 90px 0 70px;
   }
   .site-footer {
     padding: 48px 0;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .contact-info h2,
+  .contact-info .section-subtitle {
+    text-align: center;
+  }
+  .contact-recap {
+    text-align: center;
+  }
+  .lightbox {
+    padding: 72px 20px 24px;
   }
   .services-grid, .portfolio-grid {
     grid-template-columns: 1fr;
