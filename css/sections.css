@@ -210,13 +210,17 @@
   flex-wrap: wrap;
 }
 
-/* Every major section below opens with a hairline + a small coral
-   tick under its heading -- a consistent "new block starts here"
-   marker. The site was one continuous dark wash with only spacing
-   between sections; real reviewer feedback flagged that as blocks
-   blending together with nothing to anchor attention. Contact and
-   the footer already carry their own stronger breaks (a full color
-   change, and an existing border) so they're excluded here. */
+/* Every major section below opens with a coral hairline, a soft
+   spotlight glow, and a small coral tick under its heading -- a
+   consistent "new block starts here" marker. The site was one
+   continuous dark wash with only spacing between sections; real
+   reviewer feedback (twice, independently) flagged that as blocks
+   blending together with nothing to anchor attention or catch the
+   eye. Contact and the footer already carry their own stronger
+   breaks (a full color change, and an existing border) so they're
+   excluded here. The glow reuses the exact recipe already proven on
+   .hero::before and .service-detail::before -- one visual language
+   for "a block begins here", not a new device per section. */
 .about,
 .services,
 .portfolio,
@@ -224,7 +228,39 @@
 .advantages,
 .poster,
 .faq {
-  border-top: 1px solid var(--border-glass);
+  position: relative;
+  border-top: 1px solid rgba(255, 107, 74, 0.22);
+}
+
+.about::before,
+.services::before,
+.portfolio::before,
+.process::before,
+.advantages::before,
+.poster::before,
+.faq::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  width: min(640px, 100vw);
+  height: 320px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(255, 107, 74, 0.13) 0%, rgba(255, 171, 143, 0.05) 40%, transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about > .container,
+.services > .container,
+.portfolio > .container,
+.process > .container,
+.advantages > .container,
+.poster > .container,
+.faq > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .services h2::after,
@@ -234,11 +270,12 @@
 .faq h2::after {
   content: '';
   display: block;
-  width: 48px;
-  height: 3px;
-  margin: 16px auto 0;
+  width: 64px;
+  height: 4px;
+  margin: 18px auto 0;
   background: var(--accent-violet);
   border-radius: 2px;
+  box-shadow: 0 0 16px rgba(255, 107, 74, 0.5);
 }
 
 /* Deliberately the most spacious section relative to its word count —
