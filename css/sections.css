@@ -574,15 +574,23 @@
   font-size: clamp(44px, 10.5vw, 128px);
   line-height: 1.05;
   letter-spacing: -0.02em;
+  text-shadow: 0 2px 12px rgba(3, 1, 6, 0.8);
 }
 
 .poster-text span {
   display: block;
 }
 
+/* text-shadow is computed from the glyph's full outline, not its
+   fill -- so this still casts a solid shape behind the hollow
+   letterforms even though the fill itself is transparent. Needed
+   here more than anywhere else on the page: a star rendering inside
+   an open counter (the hole in "О", "б", "а") would otherwise show
+   straight through the single largest text on the page. */
 .poster-outline {
   color: transparent;
   -webkit-text-stroke: 1.5px var(--accent-violet);
+  text-shadow: 0 2px 12px rgba(3, 1, 6, 0.8);
 }
 
 .faq {

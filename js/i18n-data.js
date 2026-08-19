@@ -18,7 +18,7 @@ export const dictionary = {
 
   'about.title': { ua: 'Про нас', en: 'About us' },
   'about.text': { ua: "Nova AI — команда дизайнерів, копірайтерів і AI-інженерів. Бриф сьогодні, готовий результат за кілька днів.", en: 'Nova AI is a team of designers, copywriters and AI engineers. Brief today, finished work in days.' },
-  'about.textSecondary': { ua: 'AI без чіткого завдання видає красиву порожнечу — тому ми починаємо не з генерації, а з брифу: що продаєте, кому і чим відрізняєтесь. Це третина процесу нижче — і саме вона визначає, чи вийде матеріал під ваш бренд, а не випадкова картинка.', en: 'AI without a clear brief just produces pretty emptiness — so we start with the brief, not the generation: what you sell, to whom, and what sets you apart. That\'s the first step below, and it decides whether you get material built for your brand or a random image.' },
+  'about.textSecondary': { ua: 'AI без чіткого завдання видає красиву порожнечу — тому ми починаємо не з генерації, а з брифу: що продаєте, кому і чим відрізняєтесь. Це перший крок процесу нижче — і саме він визначає, чи вийде матеріал під ваш бренд, а не випадкова картинка.', en: 'AI without a clear brief just produces pretty emptiness — so we start with the brief, not the generation: what you sell, to whom, and what sets you apart. That\'s the first step below, and it decides whether you get material built for your brand or a random image.' },
 
   'services.title': { ua: 'Послуги', en: 'Services' },
   'services.subtitle': { ua: "Повний цикл AI-креативу для вашого бренду", en: 'A full cycle of AI-powered creative for your brand' },
@@ -37,7 +37,7 @@ export const dictionary = {
   'services.items.automation.subtitle': { ua: 'Бот відповідає клієнтам цілодобово', en: 'A bot that replies to clients around the clock' },
   'services.items.automation.ariaChoose': { ua: 'Обрати послугу: AI-автоматизація та боти', en: 'Choose this service: AI Automation & Bots' },
   'services.items.copywriting.title': { ua: 'AI-копірайтинг', en: 'AI Copywriting' },
-  'services.items.copywriting.subtitle': { ua: 'Слова, які продають', en: 'Words that sell' },
+  'services.items.copywriting.subtitle': { ua: 'Тексти, які не звучать як AI', en: "Copy that doesn't read like AI" },
   'services.items.copywriting.ariaChoose': { ua: 'Обрати послугу: AI-копірайтинг', en: 'Choose this service: AI Copywriting' },
   'services.items.consulting.title': { ua: 'Консалтинг з впровадження AI', en: 'AI Consulting' },
   'services.items.consulting.subtitle': { ua: 'Перший крок до AI без хаосу', en: 'Your first step into AI, without the chaos' },
@@ -177,7 +177,7 @@ export const dictionary = {
   'service.automation.steps.3': { ua: 'Тестування і запуск з моніторингом', en: 'Testing and launch with monitoring' },
 
   'service.copywriting.title': { ua: 'AI-копірайтинг', en: 'AI Copywriting' },
-  'service.copywriting.tagline': { ua: 'Слова, які продають', en: 'Words that sell' },
+  'service.copywriting.tagline': { ua: 'Тексти, які не звучать як AI', en: "Copy that doesn't read like AI" },
   'service.copywriting.intro': { ua: 'Пишемо тексти для сайтів, реклами та розсилок за допомогою AI, з обов\'язковою редакторською перевіркою — щоб звучало природно й переконливо.', en: 'We write website, ad, and email copy with AI, always followed by editorial review — so it reads natural and persuasive, never generic.' },
   'service.copywriting.included.0': { ua: 'Тексти для сайту та лендингів', en: 'Website and landing page copy' },
   'service.copywriting.included.1': { ua: 'Рекламні тексти й сценарії', en: 'Ad copy and scripts' },
