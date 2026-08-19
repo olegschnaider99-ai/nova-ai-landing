@@ -190,6 +190,7 @@
 .hero-subtitle {
   font-size: 18px;
   color: var(--text-secondary);
+  text-shadow: 0 2px 12px rgba(3, 1, 6, 0.8);
   margin-bottom: 12px;
 }
 
@@ -268,6 +269,7 @@
   font-size: clamp(22px, 2.6vw, 30px);
   line-height: 1.5;
   font-weight: 500;
+  text-shadow: 0 2px 12px rgba(3, 1, 6, 0.8);
 }
 
 /* Deliberately smaller/quieter than the statement above it -- this is
@@ -281,6 +283,7 @@
   font-weight: 400;
   margin-top: 28px;
   max-width: 56ch;
+  text-shadow: 0 2px 12px rgba(3, 1, 6, 0.8);
 }
 
 .services {
@@ -295,6 +298,16 @@
 .services .section-subtitle, .portfolio .section-subtitle, .process .section-subtitle, .faq .section-subtitle, .contact .section-subtitle {
   text-align: center;
   margin-bottom: 48px;
+}
+
+/* These headings sit directly on the bare starfield canvas, no card
+   or glass panel behind them -- the same legibility shadow already
+   used on .hero-description, extended everywhere text shares that
+   same exposed background. Contact excluded: it's on the light
+   paper background, not the starfield. */
+.services h2, .portfolio h2, .process h2, .advantages h2, .faq h2,
+.services .section-subtitle, .portfolio .section-subtitle, .process .section-subtitle, .faq .section-subtitle {
+  text-shadow: 0 2px 12px rgba(3, 1, 6, 0.8);
 }
 
 .services-grid {
@@ -473,11 +486,13 @@
 .process-timeline h3 {
   font-size: 17px;
   margin-bottom: 8px;
+  text-shadow: 0 2px 12px rgba(3, 1, 6, 0.8);
 }
 
 .process-timeline p {
   font-size: 13px;
   color: var(--text-secondary);
+  text-shadow: 0 2px 12px rgba(3, 1, 6, 0.8);
 }
 
 /* Reads as quiet confirmation, not another pitch — more room than its
@@ -537,10 +552,12 @@
   width: 220px;
   margin-bottom: 0;
   font-size: 22px;
+  text-shadow: 0 2px 12px rgba(3, 1, 6, 0.8);
 }
 
 .advantage-item p {
   margin-bottom: 0;
+  text-shadow: 0 2px 12px rgba(3, 1, 6, 0.8);
 }
 
 /* Poster moment — the emotional climax of the page, not a transitional
