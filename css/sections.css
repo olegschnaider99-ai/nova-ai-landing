@@ -209,6 +209,37 @@
   flex-wrap: wrap;
 }
 
+/* Every major section below opens with a hairline + a small coral
+   tick under its heading -- a consistent "new block starts here"
+   marker. The site was one continuous dark wash with only spacing
+   between sections; real reviewer feedback flagged that as blocks
+   blending together with nothing to anchor attention. Contact and
+   the footer already carry their own stronger breaks (a full color
+   change, and an existing border) so they're excluded here. */
+.about,
+.services,
+.portfolio,
+.process,
+.advantages,
+.poster,
+.faq {
+  border-top: 1px solid var(--border-glass);
+}
+
+.services h2::after,
+.portfolio h2::after,
+.process h2::after,
+.advantages h2::after,
+.faq h2::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin: 16px auto 0;
+  background: var(--accent-violet);
+  border-radius: 2px;
+}
+
 /* Deliberately the most spacious section relative to its word count —
    restraint here is the point, so it needs room to read as a choice. */
 .about {
