@@ -396,6 +396,15 @@
   gap: 24px;
 }
 
+.services-grid .service-card:nth-child(6) .service-card-body {
+  flex: 1;
+}
+
+.services-grid .service-card:nth-child(6) .service-card-actions {
+  justify-content: flex-start;
+  gap: 24px;
+}
+
 /* Every other card ends in a photo, so this one going text-only was
    the one spot the section repeated its own icon+copy template with
    nothing to look at. Sized as a fixed thumbnail (not the stretched
@@ -420,6 +429,18 @@
 /* Scaled up from a thumbnail grid to exhibition scale — the dominant
    tile (portfolio-card--1) needs to feel like a hero project you stop
    and look at, not a card you scan past with five siblings. */
+.portfolio .section-subtitle {
+  margin-bottom: 10px;
+}
+
+.portfolio-authenticity {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0 0 48px;
+  text-shadow: 0 2px 12px rgba(3, 1, 6, 0.8);
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
