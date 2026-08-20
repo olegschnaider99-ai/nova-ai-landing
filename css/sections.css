@@ -284,8 +284,15 @@
   padding: 200px 0;
 }
 
+/* About's text had nothing anchoring it in the frame -- no card, no
+   divider nearby, just a paragraph adrift in open starfield. A left
+   spine (same accent used for every other section's heading tick)
+   gives the block a fixed edge to read from without boxing it into
+   a card, which would undo the section's deliberate restraint. */
 .about-inner {
   max-width: 640px;
+  padding-left: 28px;
+  border-left: 2px solid var(--accent-violet);
 }
 
 /* A whisper, not a headline — sets context without claiming attention
